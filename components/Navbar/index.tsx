@@ -2,44 +2,62 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import mainLogo from "../../public/images/logo.svg";
 import Button from "../Button";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "../SocialMediaIcons";
+import DownloadPDFLink from "../DownloadPDFLink";
 
 const links = [
   {
     id: 1,
     name: "Showreel",
-    href: "#",
+    href: "#showReelSection",
   },
   {
     id: 2,
     name: "Služby",
-    href: "#",
+    href: "#ourServicesSection",
   },
   {
     id: 3,
     name: "Kontakt",
-    href: "#",
+    href: "#contactSection",
   },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   function toggleNavigation() {
     setIsOpen(!isOpen);
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full shadow-sm' ${
-        isOpen ? "bg-black" : ""
+      className={`fixed top-0 left-0 z-50 w-full shadow-sm transition-colors duration-500' ${
+        isOpen || isScrolled ? "bg-black" : ""
       }`}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link href="#" className="flex items-center" prefetch={false}>
           <div className="h-20 w-36 group">
             <Image
@@ -55,7 +73,7 @@ const Navbar = () => {
             <Link
               key={link.id}
               href={link.href}
-              className="uppercase hover:text-gray-800 transition duration-300 ease-in-out"
+              className="uppercase hover:text-gray-800 transition duration-300 ease-in-out text-xl"
               prefetch={false}
             >
               {link.name}
@@ -75,13 +93,13 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <motion.nav
-          className="md:hidden bg-black h-screen w-screen text-white"
+          className="md:hidden bg-black h-screen w-screen text-white asbolute top-0 flex-col flex items-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <ul className="relative top-20 flex flex-col h-screen items-center gap-10 text-2xl p-4">
+          <ul className="relative top-20 flex flex-col items-center gap-10 text-2xl p-4">
             {links.map((link) => (
               <li key={link.id}>
                 <Link
@@ -95,7 +113,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="absolute">
+          <div className="fixed bottom-24">
+            <DownloadPDFLink />
+          </div>
+          <div className="fixed bottom-10">
             <SocialMediaIcons />
           </div>
         </motion.nav>

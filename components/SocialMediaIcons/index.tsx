@@ -9,19 +9,19 @@ const socialLinks = [
   {
     id: 1,
     name: "Instagram",
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/insidefilmscz/",
     icon: <FaInstagram size={24} />, // Instagram icon
   },
   {
     id: 2,
     name: "Facebook",
-    url: "https://www.facebook.com/",
+    url: "https://www.facebook.com/insideFILMScz",
     icon: <FaFacebookF size={24} />, // Facebook icon
   },
   {
     id: 3,
     name: "Vimeo",
-    url: "https://vimeo.com/",
+    url: "https://vimeo.com/insidefilmscz",
     icon: <FaVimeoV size={24} />, // Vimeo icon
   },
 ];

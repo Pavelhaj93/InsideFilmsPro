@@ -8,22 +8,22 @@ import SocialMediaIcons from "@/components/SocialMediaIcons";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen w-screen">
+    <section className="relative h-screen w-screen">
       <Image
         src="/images/BGBannerCrop.jpg"
-        alt="Hero"
+        alt="image of a man in a cape from behind"
         layout="fill"
         objectFit="cover"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="w-1/2 mb-8">
+        <div className="w-2/5 mb-8">
           <motion.div
             initial={{ scale: 1.3, opacity: 0 }}
             animate={{
               scale: 1,
               opacity: 1,
               transition: {
-                duration: 0.5, // Faster animation
+                duration: 0.3, // Faster animation
                 ease: "easeInOut",
                 onComplete: () => {
                   // Adding shake effect at the end
@@ -45,7 +45,7 @@ const HeroSection = () => {
           <SocialMediaIcons />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
