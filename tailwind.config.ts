@@ -13,6 +13,16 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        glow: "glow 5s infinite",
+      },
+      keyframes: {
+        glow: {
+          "0%": { filter: "saturate(100%)" },
+          "50%": { filter: "saturate(0%)" },
+          "100%": { filter: "saturate(100%)" },
+        },
+      },
     },
   },
   plugins: [],

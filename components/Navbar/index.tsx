@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full shadow-sm transition-colors duration-500' ${
+      className={`fixed top-0 left-0 z-50 w-full transition-colors duration-500' ${
         isOpen || isScrolled ? "bg-black" : ""
       }`}
     >
@@ -80,12 +80,12 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
           <Button variant="outline" onClick={toggleNavigation}>
             {isOpen ? (
-              <XIcon className="h-6 w-6 text-white" />
+              <XIcon className="h-8 w-8 text-white" />
             ) : (
-              <MenuIcon className="h-6 w-6 text-white" />
+              <MenuIcon className="h-8 w-8 text-white" />
             )}
             <span className="sr-only">Toggle navigation</span>
           </Button>
@@ -113,10 +113,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="fixed bottom-24">
+          <div className="fixed bottom-32">
             <DownloadPDFLink />
           </div>
-          <div className="fixed bottom-10">
+          <div className="fixed bottom-20 xl:bottom-10">
             <SocialMediaIcons />
           </div>
         </motion.nav>

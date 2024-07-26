@@ -2,7 +2,7 @@ import { FaCogs, FaFilm, FaRegLightbulb } from "react-icons/fa";
 import { IoBrushOutline, IoCameraOutline } from "react-icons/io5";
 import { PiMagicWand } from "react-icons/pi";
 
-const grey = "rgb(74, 72, 70)";
+export const grey = "rgb(74, 72, 70)";
 
 export const services = [
   {

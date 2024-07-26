@@ -41,7 +41,7 @@ const HeroSection = () => {
             />
           </motion.div>
         </div>
-        <div className="absolute bottom-10">
+        <div className="absolute bottom-20 xl:bottom-10">
           <SocialMediaIcons />
         </div>
       </div>
