@@ -7,10 +7,9 @@ const AboutUsSection = () => {
       id="showReelSection"
       className="relative w-full py-12 md:py-24 px-4 lg:py-32 h-[900px]"
     >
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: "url(path/to/your/showreel/image.jpg)" }}
-      ></div>
+      {/*  */}
+      <div className="absolute inset-0 z-0 bg-cover bg-center opacity-30"></div>
+      {/*  */}
       <div className="relative z-10 mx-4 md:mx-20">
         <div className="space-y-4">
           <div className="inline-block rounded-lg py-1 text-2xl">O NÁS</div>

@@ -5,13 +5,16 @@ import { FaMailBulk, FaPhone } from "react-icons/fa";
 const ContactSection = () => {
   return (
     <>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-300 px-6 min-h-[600px] mx-auto justify-center items-center flex">
-        <div className="container md:px-6 mx-auto grid md:grid-cols-2 items-center">
+      <section
+        id="contactSection"
+        className="w-full py-12 md:py-16 lg:py-20 bg-gray-300 px-6 min-h-[300px] mx-auto justify-center items-center flex"
+      >
+        <div className="container md:px-6 mx-auto grid md:grid-cols-2 items-center gap-10">
           <div className="space-y-4 gap-6 flex flex-col mb-8 xl:mb-0">
-            <h2 className="text-5xl font-bold tracking-tighter sm:text-4xl md:text-7xl text-center">
+            <h2 className="text-5xl font-bold tracking-tighter sm:text-4xl md:text-7xl text-center xl:text-left">
               Vaše vize, naše kreativa
             </h2>
-            <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed text-center xl:text-left">
+            <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed text-center xl:text-left xl:w-5/6">
               Pomáháme našim klientům prezentovat a prodávat jejich produkty
               prostřednictvím našich kreativních služeb.
             </p>
