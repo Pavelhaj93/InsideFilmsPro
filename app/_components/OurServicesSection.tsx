@@ -7,7 +7,7 @@ const OurServicesSection = () => {
     <>
       <section
         id="ourServicesSection"
-        className="w-full h-auto py-12 md:py-24 lg:py-32 bg-cover bg-center bg-[url('/images/kinclRemake.jpg')] filter saturate-0"
+        className="w-full h-auto py-12 md:py-24 lg:py-32 bg-cover bg-center bg-[url('/images/KinclRemake.jpg')] filter saturate-0"
       >
         <div className="container mx-auto px-4 md:px-6 text-center text-white">
           <div className="mx-auto max-w-6xl space-y-6">
