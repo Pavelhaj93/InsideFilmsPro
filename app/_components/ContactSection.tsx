@@ -7,14 +7,14 @@ const ContactSection = () => {
     <>
       <section
         id="contactSection"
-        className="w-full py-12 md:py-16 lg:py-20 bg-gray-300 px-6 min-h-[300px] mx-auto justify-center items-center flex"
+        className="w-full py-12 md:py-16 lg:py-20 px-6 min-h-[300px] mx-auto justify-center items-center flex bg-[url('/images/rajnohic.jpg')] bg-cover bg-center filter brigtness-50"
       >
         <div className="container md:px-6 mx-auto grid md:grid-cols-2 items-center gap-10">
           <div className="space-y-4 gap-6 flex flex-col mb-8 xl:mb-0">
-            <h2 className="text-5xl font-bold tracking-tighter sm:text-4xl md:text-7xl text-center xl:text-left">
+            <h2 className="text-5xl font-bold tracking-tighter sm:text-4xl md:text-7xl text-center xl:text-left text-white">
               Vaše vize, naše kreativa
             </h2>
-            <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed text-center xl:text-left xl:w-5/6">
+            <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed text-center xl:text-left xl:w-5/6 text-2xl leading-9 text-white">
               Pomáháme našim klientům prezentovat a prodávat jejich produkty
               prostřednictvím našich kreativních služeb.
             </p>
@@ -23,7 +23,10 @@ const ContactSection = () => {
             <div className="grid gap-4">
               <div className="flex items-center gap-4 xl:gap-6">
                 <FaMailBulk className="xl:h-8 xl:w-8 w-6 h-6" />
-                <Link href="#" className="hover:underline text-2xl xl:text-3xl">
+                <Link
+                  href="#"
+                  className="hover:underline text-2xl xl:text-3xl tracking-wider"
+                >
                   produkce@insidepro.cz
                 </Link>
               </div>
@@ -38,12 +41,12 @@ const ContactSection = () => {
               </div>
             </div>
             <div className="grid gap-2">
-              <p className="xl:text-3xl text-2xl">
+              <p className="xl:text-3xl text-2xl tracking-wider font-sans">
                 R&T Production s.r.o., Hradec Králové / Praha
               </p>
               <p className="xl:text-3xl text-2xl">IČ: 02146142</p>
             </div>
-            <p className="text-md xl:text-lg">
+            <p className="text-md xl:text-lg tracking-wider">
               Společnost je zapsána v obchodním rejstříku vedeném Krajským
               soudem v Hradci Králové, oddíl C, vložka 35789.
             </p>

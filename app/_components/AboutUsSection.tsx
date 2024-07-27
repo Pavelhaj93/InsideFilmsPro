@@ -13,7 +13,7 @@ const AboutUsSection = () => {
       <div className="relative z-10 mx-4 md:mx-20">
         <div className="space-y-4">
           <div className="inline-block rounded-lg py-1 text-2xl">O NÁS</div>
-          <h1 className="lg:leading-tighter text-4xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+          <h1 className="lg:leading-tighter text-4xl font-bold tracking-normal sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
             JSME FILMOVÁ A FULL SERVICE KREATIVNÍ PRODUKCE
           </h1>
           <p className="max-w-[700px] md:text-3xl/relaxed">
