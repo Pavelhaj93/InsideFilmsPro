@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaInstagram, FaFacebookF, FaVimeoV } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 // Define your social media links
 const socialLinks = [
@@ -30,17 +31,39 @@ const SocialMediaIcons = () => {
   return (
     <div className="flex gap-8 space-x-4">
       {socialLinks.map(({ id, name, url, icon }) => (
-        <Link
+        <motion.div
           key={id}
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={name}
+          initial={{ y: 50, opacity: 0 }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.3,
+              ease: "easeInOut",
+            },
+          }}
+          whileHover={{
+            y: -10,
+            transition: {
+              yoyo: Infinity, // Makes the animation loop back and forth
+              duration: 0.3,
+              ease: "easeInOut",
+            },
+          }}
         >
-          <span className="text-white hover:text-gray-400 transition duration-300 ease-in-out">
-            {icon}
-          </span>
-        </Link>
+          <Link
+            key={id}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={name}
+          >
+            <span className="text-white hover:text-gray-400 transition duration-300 ease-in-out">
+              {icon}
+            </span>
+          </Link>
+        </motion.div>
       ))}
     </div>
   );

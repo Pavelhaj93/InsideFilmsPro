@@ -8,37 +8,37 @@ export const services = [
   {
     title: "Kreativní kampaně",
     description:
-      "Odemkněte potenciál vaší značky s našimi inovativními kampaněmi, které osloví a zaujmou vaše publikum.",
+      "Využijte naše inovativní kampaně k maximalizaci potenciálu vaší značky a zaujetí vašeho publika.",
     icon: <FaRegLightbulb color={grey} />,
   },
   {
     title: "Produkční služby",
     description:
-      "Oživte svou vizi s našimi produkčními službami, od konceptu až po finální realizaci.",
+      "Přetvořte svou vizi ve skutečnost díky našim kompletním produkčním službám od konceptu po realizaci.",
     icon: <FaCogs color={grey} />,
   },
   {
     title: "Audiovizuální produkce",
     description:
-      "Upoutejte své publikum našimi kvalitními audiovizuálními produkcemi od scénáře po postprodukci.",
+      "Upoutejte své publikum prvotřídními audiovizuálními produkcemi, od scénáře až po finální úpravy.",
     icon: <FaFilm color={grey} />,
   },
   {
     title: "Fotografické služby",
     description:
-      "Pozvedněte vizuální identitu vaší značky s profesionální fotografií, zachycující jedinečné momenty.",
+      "Posilte vizuální stránku vaší značky prostřednictvím profesionální fotografie zachycující jedinečné okamžiky.",
     icon: <IoCameraOutline color={grey} />,
   },
   {
     title: "Animovaná videa, 3D grafika a VFX",
     description:
-      "Oživte své nápady s našimi animovanými videi, 3D grafikou a vizuálními efekty.",
+      "Přiveďte své nápady k životu s našimi animovanými videi, 3D grafikou a špičkovými vizuálními efekty.",
     icon: <PiMagicWand color={grey} />,
   },
   {
     title: "Grafické služby",
     description:
-      "Pozvedněte vizuální identitu vaší značky s našimi profesionálními grafickými službami.",
+      "Vylepšete vizuální identitu vaší značky pomocí našich profesionálních grafických služeb.",
     icon: <IoBrushOutline color={grey} />,
   },
 ];

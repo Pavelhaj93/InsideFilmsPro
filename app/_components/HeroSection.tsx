@@ -23,16 +23,18 @@ const HeroSection = () => {
               scale: 1,
               opacity: 1,
               transition: {
-                duration: 0.3, // Faster animation
+                duration: 0.6,
                 ease: "easeInOut",
-                onComplete: () => {
-                  // Adding shake effect at the end
-                  const shake = document.querySelector(".shake");
-                  shake?.classList.add("animate-shake");
-                },
               },
             }}
-            className="z-10 shake"
+            whileHover={{
+              rotate: [0, 2, -2, 2, -2, 0],
+              transition: {
+                duration: 0.2,
+                ease: "easeInOut",
+              },
+            }}
+            className="z-10"
           >
             <Image
               src={bannerText}
