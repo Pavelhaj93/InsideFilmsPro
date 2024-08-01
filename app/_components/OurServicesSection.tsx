@@ -7,10 +7,7 @@ import { motion } from "framer-motion";
 const OurServicesSection = () => {
   return (
     <>
-      <section
-        id="ourServicesSection"
-        className="w-full h-auto py-12 md:py-24 lg:py-32 bg-cover bg-center bg-[url('/images/KinclRemake.jpg')] filter saturate-0"
-      >
+      <section className="w-full h-auto py-12 md:py-24 lg:py-32 bg-cover bg-center bg-[url('/images/new/kincl.jpg')] animate-glow 3xl:min-h-[400px] flex items-center">
         <div className="container mx-auto px-4 md:px-6 text-center text-white">
           <motion.div
             initial="hidden"
@@ -21,18 +18,13 @@ const OurServicesSection = () => {
               hidden: { opacity: 0, y: 50 },
             }}
             transition={{ duration: 0.3 }}
-            className="mx-auto max-w-6xl space-y-6"
+            className="mx-auto max-w-7xl space-y-6"
           >
-            <p className="md:text-2xl tracking-widest drop-shadow-xl text-[rgb(74, 72, 70)] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
-              specializujeme se na tvorbu{" "}
-              <strong>
-                celovečerních dokumentárních filmů, reklam, online spotů
-              </strong>{" "}
-              a poskytujeme komplexní řešení pro firmy a společnosti v oblasti
-              <strong>
-                tvorby a distribuce jejich grafického a digitálního obsahu,
-                včetně marketingové podpory.
-              </strong>
+            <p className="md:text-4xl md:leading-[3rem] tracking-widest text-[rgb(74, 72, 70)] [text-shadow:_0_3px_0_rgb(0_0_0_/_100%)] text-2xl leading-[3rem]">
+              specializujeme se na tvorbu celovečerních dokumentárních filmů,
+              reklam, online spotů a poskytujeme komplexní řešení pro firmy a
+              společnosti v oblasti tvorby a distribuce jejich grafického a
+              digitálního obsahu, včetně marketingové podpory.
             </p>
           </motion.div>
         </div>
@@ -41,7 +33,7 @@ const OurServicesSection = () => {
         id="ourServicesSection"
         className="bg-black text-white w-full py-12"
       >
-        <div className="container mx-auto px-4 h-auto">
+        <div className="container mx-auto px-4 h-auto max-w-7xl">
           <motion.h2
             initial="hidden"
             whileInView="visible"

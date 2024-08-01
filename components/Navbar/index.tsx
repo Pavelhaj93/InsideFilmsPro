@@ -12,8 +12,8 @@ import DownloadPDFLink from "../DownloadPDFLink";
 const links = [
   {
     id: 1,
-    name: "Showreel",
-    href: "#showReelSection",
+    name: "O nás",
+    href: "#aboutUsSection",
   },
   {
     id: 2,
@@ -68,17 +68,23 @@ const Navbar = () => {
           </div>
           <span className="sr-only">Inside Films</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex text-white">
+        <nav className="hidden items-baseline gap-6 text-sm font-medium md:flex text-white">
           {links.map((link) => (
             <Link
               key={link.id}
               href={link.href}
-              className="uppercase hover:text-gray-800 transition duration-300 ease-in-out text-xl"
+              className="uppercase hover:text-black transition duration-300 ease-in-out text-xl"
               prefetch={false}
             >
               {link.name}
             </Link>
           ))}
+          <Link
+            href="#"
+            className="hover:bg-white hover:text-black duration-500 rounded-full inline-flex text-white items-center justify-center bg-primary px-6 border-white border-2 text-xl font-medium pt-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring font-bebas"
+          >
+            Showreel
+          </Link>
         </nav>
         <div className="md:hidden flex items-center">
           <Button variant="outline" onClick={toggleNavigation}>
@@ -112,6 +118,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+              
           </ul>
           <div className="fixed bottom-32">
             <DownloadPDFLink />

@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen w-screen">
       <Image
-        src="/images/BGBannerCrop.jpg"
+        src="/images/new/intro.jpg"
         alt="image of a man in a cape from behind"
         layout="fill"
         objectFit="cover"

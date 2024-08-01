@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 const AboutUsSection = () => {
   return (
     <section
-      id="showReelSection"
-      className="relative w-full py-12 md:py-24 px-4 lg:py-32 h-[900px]"
+      id="aboutUsSection"
+      className="relative w-full py-12 md:py-24 px-4 lg:py-32 h-[900px] bg-white"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0 bg-cover bg-center opacity-30"></div>
       {/* Content */}
-      <div className="relative z-10 mx-4 md:mx-20">
+      <div className="relative z-10 mx-4 md:mx-20 max-w-7xl 2xl:w-[1500px] justify-center flex">
         <motion.div
           initial="hidden"
           whileInView="visible"
