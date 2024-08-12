@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const DescriptionSection = () => {
   return (
@@ -9,21 +12,75 @@ const DescriptionSection = () => {
       <div className="container px-4 md:px-6 max-w-7xl mx-auto">
         <div className="flex items-center justify-between">
           <div className="space-y-4">
-            <h1 className="text-5xl font-bold sm:text-6xl md:text-7xl xl:text-9xl">
+            <motion.h2
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, x: 0 },
+                hidden: { opacity: 0, x: -100 },
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="text-5xl font-bold sm:text-6xl md:text-7xl xl:text-9xl"
+            >
               HELLO
-              <br /> WE ARE
-              <br /> INSIDEPRO
-            </h1>
+            </motion.h2>
+            <motion.h2
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, x: 0 },
+                hidden: { opacity: 0, x: -100 },
+              }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+              className="text-5xl font-bold sm:text-6xl md:text-7xl xl:text-9xl"
+            >
+              WE ARE
+            </motion.h2>
+            <motion.h2
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, x: 0 },
+                hidden: { opacity: 0, x: -100 },
+              }}
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+              className="text-5xl font-bold sm:text-6xl md:text-7xl xl:text-9xl"
+            >
+              INSIDEPRO
+            </motion.h2>
           </div>
           <div className="flex flex-col items-start space-y-7">
-            <p className="max-w-[600px] font-extralight font-oswald md:text-xl lg:text-2xl">
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 100 },
+              }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+              className="max-w-[600px] font-extralight font-oswald md:text-xl lg:text-2xl"
+            >
               Jsme progresivní{" "}
               <span className="text-gray-500 font-normal">
                 filmová a reklamní produkce
               </span>{" "}
               s více než sedmnáctiletými profesními zkušenostmi.
-            </p>
-            <p className="max-w-[600px] font-oswald font-extralight md:text-xl lg:text-2xl">
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 100 },
+              }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="max-w-[600px] font-oswald font-extralight md:text-xl lg:text-2xl"
+            >
               Specializujeme se na tvorbu
               <span className="text-gray-500 font-normal">
                 {" "}
@@ -35,14 +92,34 @@ const DescriptionSection = () => {
                 tvorby a distribuce jejich grafického a digitálního obsahu,
                 včetně marketingové podpory.
               </span>
-            </p>
-            <p className="max-w-[600px] font-extralight md:text-xl font-oswald lg:text-2xl">
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 100 },
+              }}
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+              className="max-w-[600px] font-extralight md:text-xl font-oswald lg:text-2xl"
+            >
               Naše produkce se dělí na dvě odvětví:
-            </p>
-            <p className="max-w-[600px] md:text-4xl tracking-wider lg:text-5xl">
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 100 },
+              }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              className="max-w-[600px] md:text-4xl tracking-wider lg:text-5xl"
+            >
               INSIDE<span className="text-gray-500">FILMS</span> & INSIDE
               <span className="text-gray-500">PRODUCTION</span>
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>

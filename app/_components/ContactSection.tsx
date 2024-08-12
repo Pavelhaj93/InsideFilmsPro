@@ -23,10 +23,11 @@ const ContactSection = () => {
             viewport={{ once: true }}
             variants={variants}
             transition={{ duration: 0.5 }}
-            className="space-y-4 flex flex-col mb-8 xl:mb-0"
+            className=" flex flex-col mb-8 xl:mb-0"
           >
             <h2 className="text-5xl font-bold sm:text-4xl md:text-7xl text-center xl:text-left text-white">
-              Vaše vize, naše kreativa
+              Vaše vize
+              <br /> naše kreativa
             </h2>
             <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed text-center xl:text-left xl:w-5/6 text-2xl leading-9 text-white tracking-wide font-oswald">
               Prezentuje se a prodávejte se s naši pomocí.
@@ -45,7 +46,7 @@ const ContactSection = () => {
                 <FaMailBulk className="xl:h-8 xl:w-8 w-6 h-6" color="white" />
                 <Link
                   href="mailto:produkce@insidepro.cz"
-                  className="hover:underline text-2xl xl:text-3xl tracking-wider font-bebas text-white"
+                  className="hover:underline text-2xl xl:text-3xl tracking-wider font-bebas text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
                 >
                   produkce@insidepro.cz
                 </Link>
