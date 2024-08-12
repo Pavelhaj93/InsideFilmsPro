@@ -1,17 +1,12 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 
 const AboutUsSection = () => {
   return (
-    <section
-      id="aboutUsSection"
-      className="relative w-full py-12 md:py-24 px-4 lg:py-32 h-[900px] bg-white"
-    >
-      {/* Background */}
-      <div className="absolute inset-0 z-0 bg-cover bg-center opacity-30"></div>
-      {/* Content */}
-      <div className="relative z-10 mx-4 md:mx-20 max-w-7xl 2xl:w-[1500px] justify-center flex">
+    <section className="bg-black w-full min-h-[400px]">
+      <div className="relative z-10 mx-4 md:mx-20 max-w-7xl 2xl:w-[1500px] justify-center flex my-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -32,7 +27,7 @@ const AboutUsSection = () => {
               hidden: { opacity: 0, y: -50 },
             }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
-            className="inline-block rounded-lg py-1 text-2xl"
+            className="inline-block rounded-lg py-1 text-2xl text-white"
           >
             O NÁS
           </motion.div>
@@ -45,9 +40,10 @@ const AboutUsSection = () => {
               hidden: { opacity: 0, x: -50 },
             }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 0.4 }}
-            className="lg:leading-tighter text-4xl font-bold tracking-normal sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]"
+            className="lg:leading-tighter text-4xl text-white font-bold tracking-normal sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]"
           >
-            JSME FILMOVÁ A FULL SERVICE KREATIVNÍ PRODUKCE
+            Tvoříme vizuály, výmýšlíme kampaně, točíme reklamy na míru vašim
+            potřebám
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -58,10 +54,9 @@ const AboutUsSection = () => {
               hidden: { opacity: 0, x: 50 },
             }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 0.6 }}
-            className="max-w-[700px] md:text-3xl/relaxed"
+            className="max-w-[700px] md:text-4xl/relaxed text-white"
           >
-            Tvoříme vizuály, výmýšlíme kampaně, točíme reklamy <br />
-            na míru vašim potřebám
+            JSME FILMOVÁ A FULL SERVICE KREATIVNÍ PRODUKCE
           </motion.p>
         </motion.div>
       </div>

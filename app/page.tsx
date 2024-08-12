@@ -2,6 +2,8 @@ import HeroSection from "./_components/HeroSection";
 import AboutUsSection from "./_components/AboutUsSection";
 import OurServicesSection from "./_components/OurServicesSection";
 import ContactSection from "./_components/ContactSection";
+import VideoSection from "./_components/VideoSection";
+import DescriptionSection from "./_components/DescriptionSection";
 
 export const metadata = {
   title:
@@ -13,7 +15,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <HeroSection />
-      <AboutUsSection />
+      {/* <AboutUsSection /> */}
+      <DescriptionSection />
+      <VideoSection />
       <OurServicesSection />
       <ContactSection />
     </main>

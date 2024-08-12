@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 const OurServicesSection = () => {
   return (
     <>
-      <section className="w-full h-auto py-12 md:py-24 lg:py-32 bg-cover bg-center bg-[url('/images/new/kincl.jpg')] animate-glow 3xl:min-h-[400px] flex items-center">
-        <div className="container mx-auto px-4 md:px-6 text-center text-white">
+      {/* <section className="w-full h-auto py-12 md:py-24 lg:py-32 bg-cover bg-center bg-[url('/images/new/kincl.jpg')] animate-glow 3xl:min-h-[400px] flex items-start justify-start">
+        <div className="container px-4 md:px-6 ml-10 text-left w-2/5 text-white">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -20,18 +20,13 @@ const OurServicesSection = () => {
             transition={{ duration: 0.3 }}
             className="mx-auto max-w-7xl space-y-6"
           >
-            <p className="md:text-4xl md:leading-[3rem] tracking-widest text-[rgb(74, 72, 70)] [text-shadow:_0_3px_0_rgb(0_0_0_/_100%)] text-2xl leading-[3rem]">
-              specializujeme se na tvorbu celovečerních dokumentárních filmů,
-              reklam, online spotů a poskytujeme komplexní řešení pro firmy a
-              společnosti v oblasti tvorby a distribuce jejich grafického a
-              digitálního obsahu, včetně marketingové podpory.
-            </p>
+            <h4 className="text-3xl md:text-4xl font-bold font-bebas"></h4>
           </motion.div>
         </div>
-      </section>
+      </section> */}
       <section
         id="ourServicesSection"
-        className="bg-black text-white w-full py-12"
+        className="bg-black text-white w-full py-8"
       >
         <div className="container mx-auto px-4 h-auto max-w-7xl">
           <motion.h2

@@ -14,7 +14,7 @@ const ContactSection = () => {
     <>
       <section
         id="contactSection"
-        className="w-full py-12 md:py-16 lg:py-20 px-6 min-h-[300px] mx-auto justify-center items-center flex bg-[url('/images/new/stepan.jpg')] bg-cover bg-center animate-glow"
+        className="w-full py-12 md:py-16 lg:py-20 px-6 min-h-[300px] mx-auto justify-center items-center flex bg-[url('/images/new/kincl.jpg')] bg-cover bg-center animate-glow"
       >
         <div className="container md:px-6 mx-auto grid md:grid-cols-2 items-center gap-10 max-w-7xl">
           <motion.div
@@ -29,8 +29,7 @@ const ContactSection = () => {
               Vaše vize, naše kreativa
             </h2>
             <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed text-center xl:text-left xl:w-5/6 text-2xl leading-9 text-white tracking-wide font-oswald">
-              Pomáháme našim klientům prezentovat a prodávat jejich produkty
-              prostřednictvím našich kreativních služeb.
+              Prezentuje se a prodávejte se s naši pomocí.
             </p>
           </motion.div>
           <motion.div
@@ -39,7 +38,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             variants={variants}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-4 bg-black p-4 xl:p-6 rounded-lg shadow-lg gap-4 flex flex-col mx-auto"
+            className="space-y-4 p-4 xl:p-6 rounded-lg shadow-lg gap-4 flex flex-col mx-auto"
           >
             <div className="grid gap-4">
               <div className="flex items-center gap-4 xl:gap-6">
@@ -60,19 +59,17 @@ const ContactSection = () => {
                   +420 731 727 306
                 </Link>
               </div>
-            </div>
-            <div className="grid gap-4">
               <p className="xl:text-3xl text-2xl tracking-wider font-oswald text-white">
                 R&T Production s.r.o., Hradec Králové / Praha
               </p>
               <p className="xl:text-3xl text-2xl font-oswald text-white">
                 IČ: 02146142
               </p>
+              <p className="text-sm xl:text-md tracking-wider font-oswald text-white">
+                Společnost je zapsána v obchodním rejstříku vedeném Krajským
+                soudem v Hradci Králové, oddíl C, vložka 35789.
+              </p>
             </div>
-            <p className="text-md xl:text-lg tracking-wider font-oswald text-white">
-              Společnost je zapsána v obchodním rejstříku vedeném Krajským
-              soudem v Hradci Králové, oddíl C, vložka 35789.
-            </p>
           </motion.div>
         </div>
       </section>

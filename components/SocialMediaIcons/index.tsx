@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { FaInstagram, FaFacebookF, FaVimeoV } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaVimeoV, FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 // Define your social media links
@@ -25,6 +25,12 @@ const socialLinks = [
     url: "https://vimeo.com/insidefilmscz",
     icon: <FaVimeoV size={24} />, // Vimeo icon
   },
+  {
+    id: 4,
+    name: "Youtube",
+    url: "https://www.youtube.com/@INSIDEPROCZ",
+    icon: <FaYoutube size={24} />, // Youtube icon
+  },
 ];
 
 const SocialMediaIcons = () => {
@@ -44,7 +50,7 @@ const SocialMediaIcons = () => {
             },
           }}
           whileHover={{
-            y: -10,
+            y: -5,
             transition: {
               yoyo: Infinity, // Makes the animation loop back and forth
               duration: 0.3,

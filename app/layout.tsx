@@ -11,7 +11,7 @@ const bebasNeue = Bebas_Neue({
 
 const oswald = Oswald({
   subsets: ["latin"],
-  weight: "200",
+  weight: ["200", "300", "400"],
   variable: "--oswald",
 });
 

@@ -57,12 +57,12 @@ const Navbar = () => {
         isOpen || isScrolled ? "bg-black" : ""
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between">
         <Link href="#" className="flex items-center" prefetch={false}>
           <div className="h-20 w-36 group">
             <Image
               src={mainLogo}
-              className="h-full w-full transition-colors duration-300 group-hover:text-gray-400"
+              className="h-full w-full transition duration-300 ease-in-out fill-current text-white group-hover:text-gray-500"
               alt="inside films main logo"
             />
           </div>
@@ -73,15 +73,17 @@ const Navbar = () => {
             <Link
               key={link.id}
               href={link.href}
-              className="uppercase hover:text-black transition duration-300 ease-in-out text-xl"
+              className="uppercase hover:text-gray-600 transition duration-300 ease-in-out text-xl [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
               prefetch={false}
             >
               {link.name}
             </Link>
           ))}
           <Link
-            href="#"
-            className="hover:bg-white hover:text-black duration-500 rounded-full inline-flex text-white items-center justify-center bg-primary px-6 border-white border-2 text-xl font-medium pt-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring font-bebas"
+            href="https://www.youtube.com/watch?v=Ak5tPI3f8q8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:bg-white hover:text-gray-600 duration-500 rounded-full text-white bg-primary px-6 border-white border-2 text-xl font-medium pt-1 font-bebas"
           >
             Showreel
           </Link>
