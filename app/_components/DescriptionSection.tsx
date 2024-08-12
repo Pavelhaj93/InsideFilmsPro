@@ -15,15 +15,15 @@ const DescriptionSection = () => {
               <br /> INSIDEPRO
             </h1>
           </div>
-          <div className="flex flex-col items-start space-y-4">
-            <p className="max-w-[600px] font-extralight font-oswald md:text-2xl lg:text-3xl">
+          <div className="flex flex-col items-start space-y-7">
+            <p className="max-w-[600px] font-extralight font-oswald md:text-xl lg:text-2xl">
               Jsme progresivní{" "}
               <span className="text-gray-500 font-normal">
                 filmová a reklamní produkce
               </span>{" "}
               s více než sedmnáctiletými profesními zkušenostmi.
             </p>
-            <p className="max-w-[600px] font-oswald font-extralight md:text-2xl lg:text-3xl">
+            <p className="max-w-[600px] font-oswald font-extralight md:text-xl lg:text-2xl">
               Specializujeme se na tvorbu
               <span className="text-gray-500 font-normal">
                 {" "}
@@ -36,7 +36,7 @@ const DescriptionSection = () => {
                 včetně marketingové podpory.
               </span>
             </p>
-            <p className="max-w-[600px] font-extralight md:text-2xl font-oswald lg:text-3xl">
+            <p className="max-w-[600px] font-extralight md:text-xl font-oswald lg:text-2xl">
               Naše produkce se dělí na dvě odvětví:
             </p>
             <p className="max-w-[600px] md:text-4xl tracking-wider lg:text-5xl">
