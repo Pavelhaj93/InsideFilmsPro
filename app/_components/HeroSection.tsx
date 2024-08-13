@@ -16,7 +16,7 @@ const HeroSection = () => {
         objectFit="cover"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="w-2/5 mb-8">
+        <div className="w-3/4 lg:w-2/5 mb-8">
           <motion.div
             initial={{ scale: 1.3, opacity: 0 }}
             animate={{

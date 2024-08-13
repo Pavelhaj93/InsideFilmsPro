@@ -57,7 +57,7 @@ const Navbar = () => {
         isOpen || isScrolled ? "bg-black" : ""
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between md:px-4">
         <Link href="#" className="flex items-center" prefetch={false}>
           <div className="h-20 w-36 group">
             <Image
@@ -68,25 +68,30 @@ const Navbar = () => {
           </div>
           <span className="sr-only">Inside Films</span>
         </Link>
-        <nav className="hidden items-baseline gap-6 text-sm font-medium md:flex text-white">
-          {links.map((link) => (
-            <Link
-              key={link.id}
-              href={link.href}
-              className="uppercase hover:text-gray-600 transition duration-300 ease-in-out text-xl [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
-              prefetch={false}
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link
-            href="https://www.youtube.com/watch?v=Ak5tPI3f8q8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:bg-white hover:text-gray-600 duration-500 rounded-full text-white bg-primary px-6 border-white border-2 text-xl font-medium pt-1 font-bebas"
-          >
-            Showreel
-          </Link>
+        <nav className="hidden text-sm font-medium md:flex text-white">
+          <ul className="flex items-baseline gap-6">
+            {links.map((link) => (
+              <li key={link.id}>
+                <Link
+                  href={link.href}
+                  className="uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-xl [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
+                  prefetch={false}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="https://www.youtube.com/watch?v=Ak5tPI3f8q8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-white hover:text-gray-600 duration-500  rounded-full text-white bg-primary px-6 border-white border-2 text-xl font-medium py-1 font-bebas"
+              >
+                Showreel
+              </Link>
+            </li>
+          </ul>
         </nav>
         <div className="md:hidden flex items-center">
           <Button variant="outline" onClick={toggleNavigation}>
@@ -120,6 +125,16 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="https://www.youtube.com/watch?v=Ak5tPI3f8q8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-white hover:text-gray-600 duration-500 rounded-full text-white bg-primary px-6 border-white border-2 text-2xl font-medium pt-1 font-bebas"
+              >
+                Showreel
+              </Link>
+            </li>
               
           </ul>
           <div className="fixed bottom-32">

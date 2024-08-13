@@ -26,7 +26,7 @@ const OurServicesSection = () => {
       </section> */}
       <section
         id="ourServicesSection"
-        className="bg-black text-white w-full py-8"
+        className="bg-black text-white w-full py-8 px-4"
       >
         <div className="container mx-auto px-4 h-auto max-w-7xl">
           <motion.h2
@@ -38,7 +38,7 @@ const OurServicesSection = () => {
               hidden: { opacity: 0, scale: 0.8 },
             }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="text-3xl tracking-normal text-center mb-14 mt-8 md:text-7xl xl:text-7xl font-bebas"
+            className="text-6xl tracking-normal text-center mb-14 mt-8 md:text-7xl xl:text-7xl font-bebas"
           >
             Naše služby
           </motion.h2>

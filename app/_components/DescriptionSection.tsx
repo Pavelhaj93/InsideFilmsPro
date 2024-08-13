@@ -7,10 +7,10 @@ const DescriptionSection = () => {
   return (
     <section
       id="aboutUsSection"
-      className="w-full py-12 md:py-24 lg:py-32 bg-black text-white"
+      className="w-full py-12 md:py-16 lg:py-32 px-4 bg-black text-white"
     >
       <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="space-y-4">
             <motion.h2
               initial="hidden"
@@ -21,7 +21,7 @@ const DescriptionSection = () => {
                 hidden: { opacity: 0, x: -100 },
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="text-5xl font-bold sm:text-6xl md:text-7xl xl:text-9xl"
+              className="text-8xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
             >
               HELLO
             </motion.h2>
@@ -34,7 +34,7 @@ const DescriptionSection = () => {
                 hidden: { opacity: 0, x: -100 },
               }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-              className="text-5xl font-bold sm:text-6xl md:text-7xl xl:text-9xl"
+              className="text-8xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
             >
               WE ARE
             </motion.h2>
@@ -47,12 +47,12 @@ const DescriptionSection = () => {
                 hidden: { opacity: 0, x: -100 },
               }}
               transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-              className="text-5xl font-bold sm:text-6xl md:text-7xl xl:text-9xl"
+              className="text-8xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
             >
               INSIDEPRO
             </motion.h2>
           </div>
-          <div className="flex flex-col items-start space-y-7">
+          <div className="flex flex-col items-start space-y-7 my-6">
             <motion.p
               initial="hidden"
               whileInView="visible"
@@ -62,7 +62,7 @@ const DescriptionSection = () => {
                 hidden: { opacity: 0, y: 100 },
               }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-              className="max-w-[600px] font-extralight font-oswald md:text-xl lg:text-2xl"
+              className="max-w-[600px] text-center text-2xl font-extralight font-oswald lg:text-2xl"
             >
               Jsme progresivní{" "}
               <span className="text-gray-500 font-normal">
@@ -79,7 +79,7 @@ const DescriptionSection = () => {
                 hidden: { opacity: 0, y: 100 },
               }}
               transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-              className="max-w-[600px] font-oswald font-extralight md:text-xl lg:text-2xl"
+              className="max-w-[600px] text-center text-2xl font-oswald font-extralight lg:text-2xl"
             >
               Specializujeme se na tvorbu
               <span className="text-gray-500 font-normal">
@@ -102,7 +102,7 @@ const DescriptionSection = () => {
                 hidden: { opacity: 0, y: 100 },
               }}
               transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-              className="max-w-[600px] font-extralight md:text-xl font-oswald lg:text-2xl"
+              className="max-w-[600px] text-center self-center text-2xl font-extralight font-oswald lg:text-2xl"
             >
               Naše produkce se dělí na dvě odvětví:
             </motion.p>
@@ -115,7 +115,7 @@ const DescriptionSection = () => {
                 hidden: { opacity: 0, y: 100 },
               }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-              className="max-w-[600px] md:text-4xl tracking-wider lg:text-5xl"
+              className="max-w-[600px] text-center self-center text-3xl md:text-5xl tracking-wider lg:text-5xl"
             >
               INSIDE<span className="text-gray-500">FILMS</span> & INSIDE
               <span className="text-gray-500">PRODUCTION</span>
