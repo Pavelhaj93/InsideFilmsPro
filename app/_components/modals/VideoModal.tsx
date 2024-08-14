@@ -11,7 +11,7 @@ const VideoModal: FC<VideoModalProps> = ({ isOpen, onClose }) => {
 
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-      <div className="relative w-full max-w-7xl h-[600px] xl:h-[900px] 2xl:[1200px]">
+      <div className="relative w-full max-w-7xl h-[calc(100vh-10%)]">
         <iframe
           width="100%"
           height="100%"
