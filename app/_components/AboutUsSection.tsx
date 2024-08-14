@@ -32,7 +32,7 @@ const AboutUsSection = () => {
                 hidden: { opacity: 0, x: -100 },
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="text-8xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
+              className="text-7xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
             >
               {splitText("HELLO")}
             </motion.h2>
@@ -45,7 +45,7 @@ const AboutUsSection = () => {
                 hidden: { opacity: 0, x: -100 },
               }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-              className="text-8xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
+              className="text-7xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
             >
               {splitText("WE")} {splitText("ARE")}
             </motion.h2>
@@ -58,7 +58,7 @@ const AboutUsSection = () => {
                 hidden: { opacity: 0, x: -100 },
               }}
               transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-              className="text-8xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
+              className="text-7xl text-center lg:text-left font-bold sm:text-6xl md:text-9xl"
             >
               {splitText("INSIDEPRO")}
             </motion.h2>
