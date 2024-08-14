@@ -7,23 +7,6 @@ import { motion } from "framer-motion";
 const OurServicesSection = () => {
   return (
     <>
-      {/* <section className="w-full h-auto py-12 md:py-24 lg:py-32 bg-cover bg-center bg-[url('/images/new/kincl.jpg')] animate-glow 3xl:min-h-[400px] flex items-start justify-start">
-        <div className="container px-4 md:px-6 ml-10 text-left w-2/5 text-white">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 50 },
-            }}
-            transition={{ duration: 0.3 }}
-            className="mx-auto max-w-7xl space-y-6"
-          >
-            <h4 className="text-3xl md:text-4xl font-bold font-bebas"></h4>
-          </motion.div>
-        </div>
-      </section> */}
       <section
         id="ourServicesSection"
         className="bg-black text-white w-full py-8 px-4"
