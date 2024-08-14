@@ -16,9 +16,9 @@ const ContactSection = () => {
     <>
       <section
         id="contactSection"
-        className="w-full py-12 md:py-16 lg:py-20 px-4 min-h-[300px] mx-auto justify-center items-center flex bg-[url('/images/new/kincl.jpg')] bg-cover bg-center animate-glow"
+        className="w-full py-12 md:py-16 lg:py-20 px-4 h-auto mx-auto justify-center items-center flex bg-[url('/images/new/kincl.jpg')] bg-cover bg-center animate-glow relative"
       >
-        <div className="bg-black bg-opacity-50 absolute h-full w-full" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="container md:px-6 mx-auto flex flex-col lg:flex-row items-center lg:justify-between gap-0 md:gap-10 max-w-7xl z-10">
           <motion.div
             initial="hidden"
