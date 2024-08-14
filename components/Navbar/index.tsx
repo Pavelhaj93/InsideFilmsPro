@@ -8,6 +8,7 @@ import Button from "../Button";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "../SocialMediaIcons";
 import DownloadPDFLink from "../DownloadPDFLink";
+import VideoModal from "@/app/_components/modals/VideoModal";
 
 const links = [
   {
@@ -30,6 +31,7 @@ const links = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function toggleNavigation() {
     setIsOpen(!isOpen);
@@ -52,11 +54,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 z-50 w-full transition-colors duration-500' ${
-        isOpen || isScrolled ? "bg-black" : ""
-      }`}
-    >
+    <header className="fixed top-0 left-0 z-50 w-full transition-colors duration-500 bg-black">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between md:px-4">
         <Link href="#" className="flex items-center" prefetch={false}>
           <div className="h-20 w-36 group">
@@ -82,14 +80,13 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <Link
-                href="https://www.youtube.com/watch?v=Ak5tPI3f8q8"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
                 className="hover:bg-white hover:text-gray-600 duration-500  rounded-full text-white bg-primary px-6 border-white border-2 text-xl font-medium py-1 font-bebas"
               >
                 Showreel
-              </Link>
+              </button>
             </li>
           </ul>
         </nav>
@@ -126,14 +123,13 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <Link
-                href="https://www.youtube.com/watch?v=Ak5tPI3f8q8"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
                 className="hover:bg-white hover:text-gray-600 duration-500 rounded-full text-white bg-primary px-6 border-white border-2 text-2xl font-medium pt-1 font-bebas"
               >
                 Showreel
-              </Link>
+              </button>
             </li>
               
           </ul>
@@ -145,6 +141,8 @@ const Navbar = () => {
           </div>
         </motion.nav>
       )}
+      {/* Video Modal */}
+      <VideoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 };

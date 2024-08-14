@@ -18,14 +18,15 @@ const ContactSection = () => {
         id="contactSection"
         className="w-full py-12 md:py-16 lg:py-20 px-4 min-h-[300px] mx-auto justify-center items-center flex bg-[url('/images/new/kincl.jpg')] bg-cover bg-center animate-glow"
       >
-        <div className="container md:px-6 mx-auto flex flex-col lg:flex-row items-center gap-0 md:gap-10 max-w-7xl">
+        <div className="bg-black bg-opacity-50 absolute h-full w-full" />
+        <div className="container md:px-6 mx-auto flex flex-col lg:flex-row items-center lg:justify-between gap-0 md:gap-10 max-w-7xl z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={variants}
             transition={{ duration: 0.5 }}
-            className=" flex flex-col mb-4 md:mb-6 xl:mb-0"
+            className="flex flex-col mb-4 md:mb-6 xl:mb-0 w-full lg:w-1/2 gap-4 md:gap-6"
           >
             <h2 className="text-5xl font-bold sm:text-4xl md:text-7xl text-center xl:text-left text-white">
               Vaše vize
@@ -41,7 +42,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             variants={variants}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-4 px-4 xl:p-6 mt-4 rounded-lg shadow-lg gap-4 flex flex-col mx-auto"
+            className="space-y-4 px-4 xl:p-6 mt-4 rounded-lg shadow-lg lg:left-10 lg:relative gap-4 flex flex-col"
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4 xl:gap-6">
