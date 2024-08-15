@@ -19,7 +19,6 @@ const AnimatedLetter = ({ char }: { char: string }) => {
       .start({
         color: "#6b7280", // Change to gray on hover
         x: [0, 5, 0], // Slight movement right and back
-        height: [null, "110%"], // Increase height on hover
         transition: { duration: 0.6 }, // Animation duration
       })
       .then(() => {
