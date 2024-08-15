@@ -92,7 +92,7 @@ const Navbar = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <ul className="relative top-20 flex flex-col items-center gap-10 text-2xl p-4">
+          <ul className="relative top-20 flex flex-col items-center gap-10 text-6xl p-4">
             {links.map((link) => (
               <li key={link.id}>
                 <Link
@@ -109,7 +109,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
-                className="hover:bg-white hover:text-gray-600 duration-500 rounded-full text-white bg-primary px-6 border-white border-2 text-2xl font-medium pt-1 font-bebas"
+                className="hover:bg-white hover:text-gray-600 duration-500 rounded-full text-white bg-primary border-white border-2 text-6xl font-medium pt-2 pb-1 px-10 font-bebas"
               >
                 Showreel
               </button>
@@ -117,7 +117,7 @@ const Navbar = () => {
               
           </ul>
           <div className="fixed bottom-32">
-            <DownloadPDFLink />
+            <DownloadPDFLink size="lg" />
           </div>
           <div className="fixed bottom-20 xl:bottom-10">
             <SocialMediaIcons />

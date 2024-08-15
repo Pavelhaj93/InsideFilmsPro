@@ -90,7 +90,7 @@ const OurServicesSection = () => {
               delay: services.length * 0.2,
             }}
           >
-            <DownloadPDFLink />
+            <DownloadPDFLink size="lg" />
           </motion.div>
         </div>
       </section>
