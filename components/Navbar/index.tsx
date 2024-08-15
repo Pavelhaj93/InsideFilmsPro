@@ -116,10 +116,10 @@ const Navbar = () => {
             </li>
               
           </ul>
-          <div className="fixed bottom-32">
+          <div className="fixed bottom-20">
             <DownloadPDFLink size="lg" />
           </div>
-          <div className="fixed bottom-20 xl:bottom-10">
+          <div className="fixed bottom-10">
             <SocialMediaIcons />
           </div>
         </motion.nav>
