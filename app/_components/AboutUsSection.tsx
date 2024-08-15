@@ -1,17 +1,46 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
+// Function to split the text into spans
 const splitText = (text: string) => {
-  return text.split("").map((char, index) => (
-    <span
-      key={`${char}+${index}`}
-      className="inline-block transition-all duration-500 relative hover:translate-x-1 hover:text-gray-400" // Add hover color change here
+  return text
+    .split("")
+    .map((char, index) => <AnimatedLetter key={index} char={char} />);
+};
+
+// AnimatedLetter Component
+const AnimatedLetter = ({ char }: { char: string }) => {
+  const controls = useAnimation();
+
+  const handleHoverStart = () => {
+    controls
+      .start({
+        color: "#6b7280", // Change to gray on hover
+        x: [0, 5, 0], // Slight movement right and back
+        height: [null, "110%"], // Increase height on hover
+        transition: { duration: 0.6 }, // Animation duration
+      })
+      .then(() => {
+        // Once animation is complete, change color back to white
+        controls.start({
+          color: "#ffffff", // Change back to white after animation
+          transition: { duration: 0.6 }, // Slightly faster transition back to white
+        });
+      });
+  };
+
+  return (
+    <motion.span
+      className="inline-block relative"
+      onHoverStart={handleHoverStart}
+      animate={controls}
+      style={{ display: "inline-block", cursor: "pointer" }}
     >
       {char}
-    </span>
-  ));
+    </motion.span>
+  );
 };
 
 const AboutUsSection = () => {
