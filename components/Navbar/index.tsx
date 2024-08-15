@@ -92,7 +92,7 @@ const Navbar = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <ul className="relative top-20 flex flex-col items-center gap-10 text-6xl p-4">
+          <ul className="relative top-10 flex flex-col items-center gap-6 text-6xl p-4">
             {links.map((link) => (
               <li key={link.id}>
                 <Link
