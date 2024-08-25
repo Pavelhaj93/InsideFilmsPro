@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { LuFolderSearch } from "react-icons/lu";
-import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 import { FiPhoneIncoming } from "react-icons/fi";
+import { SlLocationPin } from "react-icons/sl";
+import { CiLocationOn } from "react-icons/ci";
 
 const ContactSection = () => {
   const variants = {
@@ -46,10 +48,7 @@ const ContactSection = () => {
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4 xl:gap-6">
-                <MdOutlineEmail
-                  className="xl:h-8 xl:w-8 w-8 h-8"
-                  color="white"
-                />
+                <MdOutlineEmail className="w-8 h-8" color="white" />
                 <Link
                   href="mailto:produkce@insidepro.cz"
                   className="hover:underline text-2xl xl:text-3xl tracking-wider text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
@@ -58,10 +57,7 @@ const ContactSection = () => {
                 </Link>
               </div>
               <div className="flex items-center gap-4 xl:gap-6">
-                <FiPhoneIncoming
-                  className="xl:h-8 xl:w-8 h-8 w-8"
-                  color="white"
-                />
+                <FiPhoneIncoming className="h-8 w-8" color="white" />
                 <Link
                   href="tel:+420731727306"
                   className="hover:underline text-2xl xl:text-3xl text-white"
@@ -70,19 +66,18 @@ const ContactSection = () => {
                 </Link>
               </div>
               <div className="flex items-center gap-4 xl:gap-6">
-                <MdOutlineLocationOn
-                  className="xl:h-10 xl:w-10 right-1 relative md:h-8 md:w-8 h-16 w-16"
-                  color="white"
-                />
-                <p className="xl:text-3xl text-2xl tracking-wider text-white">
-                  R&T Production s.r.o., Hradec Králové / Praha
-                </p>
+                <SlLocationPin className="h-8 w-8" color="white" />
+                <div className="flex flex-col sm:flex-row">
+                  <p className="xl:text-3xl text-2xl tracking-wider text-white">
+                    R&T Production s.r.o.,
+                  </p>
+                  <p className="xl:text-3xl text-2xl tracking-wider text-white">
+                    Hradec Králové / Praha
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-4 xl:gap-6">
-                <LuFolderSearch
-                  className="xl:h-8 xl:w-8 h-8 w-8"
-                  color="white"
-                />
+                <LuFolderSearch className="h-8 w-8" color="white" />
                 <p className="xl:text-3xl text-2xl text-white">IČ: 02146142</p>
               </div>
               <p className="text-sm xl:text-md tracking-wider font-oswald text-white mt-4 md:mt-0">
