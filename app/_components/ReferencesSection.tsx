@@ -10,7 +10,7 @@ export default function ReferencesSection() {
   };
   // Array of company logos
   const companies: Company[] = [
-    { name: "Sony", logo: "/images/companies/1280px-Sony_logo.svg_white" },
+    // { name: "Sony", logo: "/images/companies/1280px-Sony_logo.svg_white" }, // Where logo
     { name: "A S A", logo: "/images/companies/A S A_logo_FINAL_white.svg" },
     {
       name: "Analog Vision White",
