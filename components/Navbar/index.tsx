@@ -23,6 +23,11 @@ const links = [
   },
   {
     id: 3,
+    name: "Reference",
+    href: "#referencesSection",
+  },
+  {
+    id: 3,
     name: "Kontakt",
     href: "#contactSection",
   },

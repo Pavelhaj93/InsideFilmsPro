@@ -3,6 +3,7 @@ import AboutUsSection from "./_components/AboutUsSection";
 import VideoSection from "./_components/VideoSection";
 import OurServicesSection from "./_components/OurServicesSection";
 import ContactSection from "./_components/ContactSection";
+import ReferencesSection from "./_components/ReferencesSection";
 
 export const metadata = {
   title:
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutUsSection />
       <VideoSection />
       <OurServicesSection />
+      <ReferencesSection />
       <ContactSection />
     </main>
   );
