@@ -17,7 +17,7 @@ export default function ReferencesSection() {
       logo: "/images/companies/analog_vision_bila.svg",
     },
     { name: "Beyond Menu", logo: "/images/companies/beyond-menu-logo.svg" },
-    { name: "Buga", logo: "/images/companies/buga.jpeg" },
+    { name: "Buga", logo: "/images/companies/buga.svg" }, // Nejde na produkci
     {
       name: "Camel",
       logo: "/images/companies/camel.svg",
@@ -49,7 +49,7 @@ export default function ReferencesSection() {
       logo: "/images/companies/fit_pro.svg",
     },
     { name: "Fitmin", logo: "/images/companies/fitmin.svg" },
-    { name: "Fomei", logo: "/images/companies/FOMEI-transp.png" },
+    { name: "Fomei", logo: "/images/companies/FOMEI-transp.svg" },
     // { name: "Fource B", logo: "/images/companies/Fource-B.webp" }, TODO: convert
     { name: "Generali", logo: "/images/companies/generali.svg" },
     {
@@ -71,7 +71,7 @@ export default function ReferencesSection() {
     { name: "mBank", logo: "/images/companies/mbank_coloured.svg" },
     {
       name: "MBC International",
-      logo: "/images/companies/MBC_International.svg",
+      logo: "/images/companies/mbc_international.svg",
     },
     {
       name: "ML Základní",
