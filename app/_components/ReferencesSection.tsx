@@ -143,7 +143,7 @@ export default function ReferencesSection() {
         >
           Naše reference
         </motion.h2>
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap gap-8 justify-center">
           {companies.map((company, index) => {
             return (
               <div key={index} className="flex items-center justify-center p-4">
