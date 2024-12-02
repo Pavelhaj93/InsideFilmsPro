@@ -128,8 +128,17 @@ export default function ReferencesSection() {
   ];
 
   return (
-    <section id="referencesSection" className="py-16 bg-black w-full">
-      <div className="container mx-auto max-w-7xl px-4">
+    <section
+      id="referencesSection"
+      className="relative lg:pb-20 py-16 bg-black w-full overflow-hidden"
+    >
+      {/* Gradients on both sides */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 bottom-0 w-1/3 bg-gradient-to-r from-black to-transparent z-20" />
+        <div className="absolute top-0 right-0 bottom-0 w-1/3 bg-gradient-to-l from-black to-transparent z-20" />
+      </div>
+
+      <div className="container mx-auto max-w-7xl px-4 relative z-10">
         <motion.h2
           initial="hidden"
           whileInView="visible"
@@ -143,7 +152,7 @@ export default function ReferencesSection() {
         >
           Naše reference
         </motion.h2>
-        <div className="flex flex-wrap gap-8 justify-center">
+        <div className="flex flex-wrap gap-6 justify-center">
           {companies.map((company, index) => {
             return (
               <div key={index} className="flex items-center justify-center p-4">
@@ -152,7 +161,7 @@ export default function ReferencesSection() {
                   alt={`${company.name} logo`}
                   width={100}
                   height={100}
-                  className="w-auto max-w-60 object-cover max-h-20 h-auto filter grayscale"
+                  className="w-auto object-cover max-h-10 h-auto filter grayscale hover:grayscale-0 [transition: filter] duration-300 ease-in-out"
                 />
               </div>
             );
