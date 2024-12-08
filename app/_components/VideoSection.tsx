@@ -4,24 +4,18 @@ const VideoSection = () => {
   return (
     <section
       id="aboutUsSection"
-      className="relative w-full py-12 md:py-24 px-4 lg:py-32 h-[900px]"
+      className="relative w-full h-[900px] overflow-hidden pt-[56.25%]"
     >
-      {/* Background for Desktop */}
-      <video
-        autoPlay
-        loop
-        src="/videos/INSIDEPRO_WEB_HD_CROP.mp4"
-        muted
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-      />
+      {/* TODO: Add mobile video*/}
 
-      {/* Background for Mobile */}
-      <video
-        autoPlay
-        loop
-        muted
-        src="/videos/INSIDEPRO_MOBILE.mp4"
-        className="absolute inset-0 w-full h-full object-cover block md:hidden"
+      {/* Desktop */}
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/qMNJB4Uq3ZY?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&playlist=qMNJB4Uq3ZY"
+        title="Inside Films Showreel"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        className="absolute inset-0 w-full h-full"
       />
     </section>
   );

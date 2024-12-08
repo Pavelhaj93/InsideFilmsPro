@@ -1,41 +1,41 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
-import mainLogo from "../../public/images/logo.svg";
 import Button from "../Button";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "../SocialMediaIcons";
 import DownloadPDFLink from "../DownloadPDFLink";
 import VideoModal from "@/app/_components/modals/VideoModal";
+import ReactLogo from "./ReactLogo";
 
 const links = [
   {
     id: 1,
-    name: "O nás",
-    href: "#aboutUsSection",
+    name: "Domů",
+    href: "/",
   },
   {
     id: 2,
-    name: "Služby",
-    href: "#ourServicesSection",
+    name: "Video",
+    href: "/video",
   },
   {
     id: 3,
-    name: "Reference",
-    href: "#referencesSection",
+    name: "Foto",
+    href: "/foto",
   },
   {
-    id: 3,
+    id: 4,
     name: "Kontakt",
-    href: "#contactSection",
+    href: "/kontakt",
   },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   function toggleNavigation() {
     setIsOpen(!isOpen);
@@ -43,13 +43,14 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full transition-colors duration-500 bg-black">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between md:px-4">
-        <Link href="#" className="flex items-center" prefetch={false}>
+      <div className="mx-auto flex h-16 container items-center justify-between px-4 md:px-6 lg:px-8">
+        <Link href="/" className="flex items-center" prefetch={false}>
           <div className="h-20 w-36 group">
-            <Image
-              src={mainLogo}
-              className="h-full w-full transition duration-300 ease-in-out fill-current text-white group-hover:text-gray-500"
-              alt="inside films main logo"
+            <ReactLogo
+              className="h-full w-full transition-colors"
+              color={isHovered ? "#6b7280" : "#fff"}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             />
           </div>
           <span className="sr-only">Inside Films</span>

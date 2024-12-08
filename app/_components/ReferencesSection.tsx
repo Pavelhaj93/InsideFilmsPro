@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+//
+// naši partneři, sony, fomei, analog vision, dron pro, sigma
+
 export default function ReferencesSection() {
   type Company = {
     name: string;
@@ -11,13 +14,13 @@ export default function ReferencesSection() {
   // Array of company logos
   const companies: Company[] = [
     // { name: "Sony", logo: "/images/companies/1280px-Sony_logo.svg_white" }, // Where logo
-    { name: "A S A", logo: "/images/companies/A S A_logo_FINAL_white.svg" },
+    // { name: "A S A", logo: "/images/companies/A S A_logo_FINAL_white.svg" },
     {
       name: "Analog Vision White",
       logo: "/images/companies/analog_vision_bila.svg",
     },
     { name: "Beyond Menu", logo: "/images/companies/beyond-menu-logo.svg" },
-    { name: "Buga", logo: "/images/companies/buga.svg" }, // Nejde na produkci
+    { name: "Buga", logo: "/images/companies/buga.svg" },
     {
       name: "Camel",
       logo: "/images/companies/camel.svg",
@@ -32,10 +35,10 @@ export default function ReferencesSection() {
     //   name: "Double Red",
     //   logo: "/images/companies/DOUBLE%20RED%20logo%20red.pdf",
     // },
-    {
-      name: "Dveře Valný Black",
-      logo: "/images/companies/dvere_valny_cerna.svg",
-    },
+    // {
+    //   name: "Dveře Valný Black",
+    //   logo: "/images/companies/dvere_valny_cerna.svg",
+    // },
     {
       name: "Embassy of India",
       logo: "/images/companies/embassy_of_india.svg",
@@ -60,10 +63,10 @@ export default function ReferencesSection() {
     { name: "Hospoda U Baby", logo: "/images/companies/hospoda_u_baby.svg" },
     { name: "ISCARE", logo: "/images/companies/iscare_flat.svg" },
     { name: "JIP", logo: "/images/companies/JIP_logo_CMYK.svg" },
-    { name: "Kaufland", logo: "/images/companies/kaufland_square.svg" },
+    { name: "Kaufland", logo: "/images/companies/kaufland.svg" },
     // { name: "Kik Logo", logo: "/images/companies/kik.svg" }, // TODO: Fix logo
     { name: "Konopí", logo: "/images/companies/konopi.svg" },
-    // { name: "Koupelny Syrový", logo: "/images/companies/koupelny_syrovy.webp" },
+    // { name: "Koupelny Syrový", logo: "/images/companies/koupelny_syrovy.webp" }, //TODO: convert logo
     {
       name: "Matěj Boxing",
       logo: "/images/companies/matej_boxing.svg",
@@ -105,11 +108,7 @@ export default function ReferencesSection() {
     {
       name: "Round XII",
       logo: "/images/companies/round_xii_bily.svg",
-    },
-    {
-      name: "Royal Cafe Bar Opočno",
-      logo: "/images/companies/royal_bar_cafe_opocno.svg",
-    },
+    }, // hodit do flatu
     // {g
     //   name: "Samsung",
     //   logo: "/images/companies/samsung.png",
@@ -134,8 +133,8 @@ export default function ReferencesSection() {
     >
       {/* Gradients on both sides */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 bottom-0 w-1/3 bg-gradient-to-r from-black to-transparent z-20" />
-        <div className="absolute top-0 right-0 bottom-0 w-1/3 bg-gradient-to-l from-black to-transparent z-20" />
+        <div className="absolute top-0 left-0 bottom-0 w-2/5 bg-gradient-to-r from-black to-transparent z-20" />
+        <div className="absolute top-0 right-0 bottom-0 w-2/5 bg-gradient-to-l from-black to-transparent z-20" />
       </div>
 
       <div className="container mx-auto max-w-7xl px-4 relative z-10">
