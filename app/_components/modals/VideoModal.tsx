@@ -15,11 +15,10 @@ const VideoModal: FC<VideoModalProps> = ({ isOpen, onClose }) => {
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/Ak5tPI3f8q8"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
+          src="https://www.youtube.com/embed/qMNJB4Uq3ZY?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&playlist=qMNJB4Uq3ZY"
+          title="Inside Films Showreel"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          className="absolute inset-0 w-full h-full"
         />
         <button
           onClick={onClose}
