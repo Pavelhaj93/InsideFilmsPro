@@ -14,6 +14,18 @@ const ContactSection = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const renderLink = (href: string, text: string, Icon: React.ElementType) => (
+    <div className="flex items-center gap-4 xl:gap-6">
+      <Icon className="w-8 h-8" color="white" />
+      <Link
+        href={href}
+        className="hover:underline text-2xl xl:text-3xl tracking-wider text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
+      >
+        {text}
+      </Link>
+    </div>
+  );
+
   return (
     <>
       <section
@@ -51,7 +63,7 @@ const ContactSection = () => {
                 <MdOutlineEmail className="w-8 h-8" color="white" />
                 <Link
                   href="mailto:produkce@insidepro.cz"
-                  className="hover:underline text-2xl xl:text-3xl tracking-wider text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
+                  className="hover:underline text-2xl xl:text-2xl tracking-wider text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
                 >
                   produkce@insidepro.cz
                 </Link>
@@ -60,7 +72,7 @@ const ContactSection = () => {
                 <FiPhoneIncoming className="h-8 w-8" color="white" />
                 <Link
                   href="tel:+420731727306"
-                  className="hover:underline text-2xl xl:text-3xl text-white"
+                  className="hover:underline text-2xl xl:text-2xl text-white"
                 >
                   +420 731 727 306
                 </Link>
@@ -68,17 +80,17 @@ const ContactSection = () => {
               <div className="flex items-center gap-4 xl:gap-6">
                 <SlLocationPin className="h-8 w-8" color="white" />
                 <div className="flex flex-col sm:flex-row">
-                  <p className="xl:text-3xl text-2xl tracking-wider text-white">
+                  <p className="xl:text-2xl tracking-wider text-white">
                     R&T Production s.r.o.,
                   </p>
-                  <p className="xl:text-3xl text-2xl tracking-wider text-white">
+                  <p className="xl:text-2xl text-2xl tracking-wider text-white">
                     Hradec Králové / Praha
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-4 xl:gap-6">
                 <LuFolderSearch className="h-8 w-8" color="white" />
-                <p className="xl:text-3xl text-2xl text-white">IČ: 02146142</p>
+                <p className="xl:text-2xl text-2xl text-white">IČ: 02146142</p>
               </div>
               <p className="text-sm xl:text-md tracking-wider font-oswald text-white mt-4 md:mt-0">
                 Společnost je zapsána v obchodním rejstříku vedeném Krajským
@@ -88,12 +100,6 @@ const ContactSection = () => {
           </motion.div>
         </div>
       </section>
-      <footer className="w-full bg-black text-white py-4 text-center">
-        <p className="text-lg tracking-wider">
-          &copy; {new Date().getFullYear()} R&T Production s.r.o. - All rights
-          reserved.
-        </p>
-      </footer>
     </>
   );
 };

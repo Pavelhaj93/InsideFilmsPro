@@ -12,7 +12,7 @@ type CustomImage = {
   height: number;
 };
 
-const imageData: CustomImage[] = Array.from({ length: 45 }, (_, index) => ({
+const imageData: CustomImage[] = Array.from({ length: 60 }, (_, index) => ({
   id: index + 1,
   src: `/foto/${index + 1}.jpg`,
   alt: `Photo ${index + 1}`,

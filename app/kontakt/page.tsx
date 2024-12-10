@@ -7,12 +7,39 @@ import Link from "next/link";
 import { SlLocationPin } from "react-icons/sl";
 import { FiPhoneIncoming } from "react-icons/fi";
 import { LuFolderSearch } from "react-icons/lu";
+import Image from "next/image";
 
 export default function Kontakt() {
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
+
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Jan Rajnoha",
+      role: "Executive Producer / Director / DOP",
+      phone: "+420 731 727 306",
+      email: "rajnoha@insidepro.cz",
+      imageSrc: "/images/team/jan.jpg",
+    },
+    {
+      id: 2,
+      name: "Petr Sochor",
+      role: "Production Manager",
+      phone: "+420 739 044 381",
+      email: "sochor@insidepro.cz",
+      imageSrc: "/images/team/petr.jpg",
+    },
+    {
+      id: 3,
+      name: "Ing. Sandra Bartelová",
+      role: "Marketing Specialist / Production",
+      email: "produkce@insidepro.cz",
+      imageSrc: "/images/team/sandra.jpg",
+    },
+  ];
 
   return (
     <div className="min-h-[calc(100vh-64px)]">
@@ -22,74 +49,121 @@ export default function Kontakt() {
         imageAlt="Guy riding a motorbike on rear wheel"
         description=""
       />
-      <section
-        id="contactSection"
-        className="w-full py-12 md:py-16 lg:py-20 px-4 h-auto mx-auto justify-center items-center bg-black flex relative"
-      >
-        <div className="container md:px-6 mx-auto flex flex-col lg:flex-row items-center lg:justify-between gap-0 md:gap-10 z-10">
+      <section className="bg-black text-white pt-16 pb-8 md:pb-16 px-4 flex items-center justify-center">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={variants}
             transition={{ duration: 0.5 }}
-            className="flex flex-col mb-4 md:mb-6 xl:mb-0 w-full lg:w-1/2 gap-4 md:gap-6"
+            className="text-center mb-12"
           >
-            <h2 className="text-5xl font-bold sm:text-4xl md:text-7xl text-center xl:text-left text-white">
-              Vaše vize
-              <br /> naše kreativa
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4">
+              Vaše vize naše kreativa
             </h2>
-            <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed text-center xl:text-left xl:w-5/6 text-2xl leading-9 text-white tracking-wide font-oswald">
-              Prezentuje se a prodávejte se s naši pomocí.
+            <p className="text-2xl">
+              Prezentujte se a prodávejte se s naši pomocí.
             </p>
           </motion.div>
+
+          {/* Team Members */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="text-4xl font-semibold text-center mb-8">Náš tým</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={member.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <div className="group h-full border-gray-800 overflow-hidden transform transition-all duration-300 hover:scale-[101%] hover:shadow-xl rounded-xl">
+                    <div className="p-0">
+                      <div className="relative h-64 mb-4">
+                        <Image
+                          src={member.imageSrc}
+                          alt={member.name}
+                          layout="fill"
+                          objectFit="cover"
+                          className="transition-all duration-300 filter grayscale group-hover:grayscale-0"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-3xl font-semibold mb-1">
+                          {member.name}
+                        </h3>
+                        <p className="text-gray-400 mb-2 text-2xl">
+                          {member.role}
+                        </p>
+                        <p className="text-gray-500 text-xl">{member.email}</p>
+                        {member.phone && (
+                          <p className="text-gray-500 text-xl">
+                            {member.phone}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Contact Info */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={variants}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-4 px-4 xl:p-6 mt-4 lg:left-10 lg:relative gap-4 flex flex-col"
+            className="mt-16 space-y-8 flex flex-col items-center"
           >
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4 xl:gap-6">
+            <div className="xl:flex grid xl:grid-cols-2 grid-cols-1 gap-6 xl:flex-row md:gap-x-20 xl:gap-x-12">
+              <div className="flex items-center gap-4">
                 <MdOutlineEmail className="w-8 h-8" color="white" />
                 <Link
                   href="mailto:produkce@insidepro.cz"
-                  className="hover:underline text-2xl xl:text-3xl tracking-wider text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
+                  className="hover:underline text-xl md:text-2xl text-white"
                 >
                   produkce@insidepro.cz
                 </Link>
               </div>
-              <div className="flex items-center gap-4 xl:gap-6">
-                <FiPhoneIncoming className="h-8 w-8" color="white" />
+              <div className="flex items-center gap-4">
+                <FiPhoneIncoming className="w-8 h-8" color="white" />
                 <Link
                   href="tel:+420731727306"
-                  className="hover:underline text-2xl xl:text-3xl text-white"
+                  className="hover:underline text-xl md:text-2xl text-white"
                 >
                   +420 731 727 306
                 </Link>
               </div>
-              <div className="flex items-center gap-4 xl:gap-6">
-                <SlLocationPin className="h-8 w-8" color="white" />
+              <div className="flex items-center gap-4">
+                <SlLocationPin className="w-8 h-8" color="white" />
                 <div className="flex flex-col sm:flex-row">
-                  <p className="xl:text-3xl text-2xl tracking-wider text-white">
+                  <p className="text-xl md:text-2xl text-white">
                     R&T Production s.r.o.,
                   </p>
-                  <p className="xl:text-3xl text-2xl tracking-wider text-white">
+                  <p className="text-xl md:text-2xl text-white">
                     Hradec Králové / Praha
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 xl:gap-6">
-                <LuFolderSearch className="h-8 w-8" color="white" />
-                <p className="xl:text-3xl text-2xl text-white">IČ: 02146142</p>
+              <div className="flex items-center gap-4">
+                <LuFolderSearch className="w-8 h-8" color="white" />
+                <p className="text-xl md:text-2xl text-white">IČ: 02146142</p>
               </div>
-              <p className="text-sm xl:text-md tracking-wider font-oswald text-white mt-4 md:mt-0">
-                Společnost je zapsána v obchodním rejstříku vedeném Krajským
-                soudem v Hradci Králové, oddíl C, vložka 35789.
-              </p>
             </div>
+            <p className="text-sm md:text-md tracking-wider font-oswald text-white mt-4">
+              Společnost je zapsána v obchodním rejstříku vedeném Krajským
+              soudem v Hradci Králové, oddíl C, vložka 35789.
+            </p>
           </motion.div>
         </div>
       </section>

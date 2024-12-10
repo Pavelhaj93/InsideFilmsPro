@@ -10,10 +10,10 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen w-screen">
       <Image
-        src="/images/new/intro.jpg"
+        src="/images/background/homepage.jpg"
         alt="image of a man in a cape from behind"
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover" // use CSS class for object-fit
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="w-3/4 lg:w-2/5 mb-8">

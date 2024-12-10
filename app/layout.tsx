@@ -30,6 +30,12 @@ export default function RootLayout({
       <body className={`${bebasNeue.className} ${oswald.variable}`}>
         <Navbar />
         {children}
+        <footer className="w-full bg-black text-white py-4 text-center">
+          <p className="text-lg tracking-wider">
+            &copy; {new Date().getFullYear()} R&T Production s.r.o. - All rights
+            reserved.
+          </p>
+        </footer>
       </body>
     </html>
   );
