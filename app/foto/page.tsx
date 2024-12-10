@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import HeadingSection from "@/components/HeadingSection/HeadingSection";
 
@@ -26,11 +26,16 @@ export default function PhotoGallery() {
     null
   );
 
-  addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeModal();
-    }
-  });
+  useEffect(() => {
+    addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
+    return () => {
+      removeEventListener("keydown", () => {});
+    };
+  }, []);
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
