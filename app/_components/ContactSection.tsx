@@ -14,18 +14,6 @@ const ContactSection = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const renderLink = (href: string, text: string, Icon: React.ElementType) => (
-    <div className="flex items-center gap-4 xl:gap-6">
-      <Icon className="w-8 h-8" color="white" />
-      <Link
-        href={href}
-        className="hover:underline text-2xl xl:text-3xl tracking-wider text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
-      >
-        {text}
-      </Link>
-    </div>
-  );
-
   return (
     <>
       <section

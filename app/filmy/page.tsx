@@ -35,6 +35,7 @@ export default function Films() {
                   alt={image.alt}
                   fill
                   className="transition-transform duration-300 hover:scale-[102%] object-cover"
+                  loading="lazy"
                 />
               </div>
             ))}

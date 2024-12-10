@@ -93,6 +93,7 @@ export default function Kontakt() {
                           layout="fill"
                           objectFit="cover"
                           className="transition-all duration-300 filter grayscale group-hover:grayscale-0"
+                          loading="lazy"
                         />
                       </div>
                       <div className="p-6">
