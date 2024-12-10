@@ -11,7 +11,7 @@ const VideoSection = () => {
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/5aYRpVmCLZU?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&mute=1&playlist=5aYRpVmCLZU"
+          src="https://www.youtube.com/embed/5aYRpVmCLZU?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&mute=1&playlist=5aYRpVmCLZU&vq=hd1080"
           title="Inside Films Showreel"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           className="absolute inset-0 w-full h-full pointer-events-none"

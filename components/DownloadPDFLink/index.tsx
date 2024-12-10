@@ -15,7 +15,7 @@ const DownloadPDFLink: FC<DownloadPDFLinkProps> = ({ size }) => {
   const sizeVar = sizes[size];
 
   return (
-    <div className="text-center my-6">
+    <div className="text-center">
       <Link
         download
         href="/pdf/INSIDEPRO_2024.pdf"

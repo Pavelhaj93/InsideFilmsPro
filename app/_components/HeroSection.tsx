@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import bannerText from "../../public/images/INSIDEFILMS_LG_B.svg";
+import bannerText from "../../public/images/insidepro_logo.png";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
         src="/images/background/homepage.jpg"
         alt="image of a man in a cape from behind"
         fill
-        className="object-cover" // use CSS class for object-fit
+        className="object-cover"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="w-3/4 lg:w-2/5 mb-8">

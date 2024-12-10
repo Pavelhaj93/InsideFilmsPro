@@ -11,7 +11,7 @@ export default function Video() {
                 vytvoříme přesně to, co potřebujete."
         imageSrc="/images/background/video.jpg"
         imageAlt="Video production background"
-        videoSrc="https://www.youtube.com/embed/5aYRpVmCLZU"
+        videoSrc="https://www.youtube.com/embed/zJv4mfBXT0U"
       />
       {/* New YouTube Video Section */}
       <section className="py-16 bg-black">

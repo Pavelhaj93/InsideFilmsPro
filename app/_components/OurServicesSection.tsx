@@ -25,10 +25,10 @@ const OurServicesSection = () => {
           >
             Naše služby
           </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 xl:gap-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 xl:gap-20 3xl:gap-32">
             {services.map((service, index) => (
               <motion.div
-                key={index}
+                key={service.id}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -72,7 +72,7 @@ const OurServicesSection = () => {
               ease: "easeInOut",
               delay: services.length * 0.15,
             }}
-            className="text-center text-2xl my-10 font-bebas"
+            className="text-center text-2xl my-10 3xl:mt-20 font-bebas"
           >
             <p>Více informací naleznete v naši PDF prezentaci</p>
           </motion.div>

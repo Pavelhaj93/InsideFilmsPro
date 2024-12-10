@@ -16,8 +16,8 @@ const imageData: CustomImage[] = Array.from({ length: 60 }, (_, index) => ({
   id: index + 1,
   src: `/foto/${index + 1}.jpg`,
   alt: `Photo ${index + 1}`,
-  width: (index + 1) % 7 === 0 || index === 0 ? 600 : 300,
-  height: (index + 1) % 7 === 0 || index === 0 ? 600 : 300,
+  width: (index + 1) % 7 === 0 || index === 0 ? 900 : 400,
+  height: (index + 1) % 7 === 0 || index === 0 ? 900 : 400,
 }));
 
 export default function PhotoGallery() {
