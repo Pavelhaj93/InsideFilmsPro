@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full transition-colors duration-500 bg-black">
       <div className="mx-auto flex h-16 container items-center justify-between px-4 md:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" prefetch={false}>
+        <Link href="/" className="flex items-center">
           <div className="h-20 w-36 group">
             <ReactLogo
               className="h-full w-full transition-colors"
@@ -67,7 +67,6 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   className="uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-xl [text-shadow:_0_0_3px_rgb(0_0_0_/_100%)]"
-                  prefetch={false}
                 >
                   {link.name}
                 </Link>
