@@ -5,10 +5,7 @@ export default function Video() {
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
         heading="VIDEO"
-        description="  Upoutejte své publikum prvotřídními audiovizuálními produkcemi,
-                od scénáře až po finální úpravy. Audiovizuální tvorba je klíčem
-                k úspěšné sebeprezentaci. Společně navrhneme ideální přístup a
-                vytvoříme přesně to, co potřebujete."
+        description=""
         imageSrc="/images/background/video.jpg"
         imageAlt="Video production background"
         videoSrc="https://www.youtube.com/embed/zJv4mfBXT0U"

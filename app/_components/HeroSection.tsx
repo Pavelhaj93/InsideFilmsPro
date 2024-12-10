@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen w-screen">
       <Image
-        src="/images/background/homepage.jpg"
+        src="/images/background/homepage.avif"
         alt="image of a man in a cape from behind"
         fill
         className="object-cover"
