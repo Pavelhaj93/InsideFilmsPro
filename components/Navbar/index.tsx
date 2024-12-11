@@ -58,8 +58,8 @@ const Navbar = () => {
             <Image
               src="/images/insidepro_logo_cut.png"
               alt="Inside Films"
-              width={120}
-              height={60}
+              width={100}
+              height={50}
               className="object-cover"
             />
           </div>
