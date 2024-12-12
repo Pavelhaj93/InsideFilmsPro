@@ -138,6 +138,7 @@ export default function PhotoGallery() {
               height={1080}
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-contain max-w-[90vw] max-h-[90vh]"
+              quality={100}
             />
 
             {/* Right Arrow Button */}
