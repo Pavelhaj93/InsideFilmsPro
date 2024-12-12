@@ -21,7 +21,7 @@ const OurServicesSection = () => {
               hidden: { opacity: 0, scale: 0.8 },
             }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="text-6xl tracking-normal text-center mb-14 mt-8 md:text-7xl xl:text-7xl font-bebas"
+            className="text-6xl tracking-normal text-center mb-14 mt-8 font-bebas"
           >
             Naše služby
           </motion.h2>
