@@ -14,6 +14,7 @@ const HeroSection = () => {
         alt="image of a man in a cape from behind"
         fill
         className="object-cover"
+        quality={100}
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="w-1/2 lg:w-1/3 mb-8">
