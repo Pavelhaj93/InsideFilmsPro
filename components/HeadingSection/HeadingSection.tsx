@@ -21,16 +21,22 @@ const HeadingSection = ({
   )}&modestbranding=1&showinfo=0&rel=0`;
 
   return (
-    <section className="relative mt-16 h-[40vh] md:h-[66vh]">
+    <section className="relative mt-16">
       {imageSrc && (
-        <Image
-          src={imageSrc}
-          alt={imageAlt ?? ""}
-          fill
-          className={`object-cover w-full block ${videoSrc && "md:hidden"}`}
-          priority
-          quality={100}
-        />
+        <div
+          className={`relative w-full h-[40vh] md:h-[66vh] ${
+            videoSrc && "md:hidden"
+          }`}
+        >
+          <Image
+            src={imageSrc}
+            alt={imageAlt ?? ""}
+            fill
+            className="object-cover"
+            priority
+            quality={100}
+          />
+        </div>
       )}
       {videoSrc && (
         <div className="h-[66vh] w-full relative pt-[56.25%] md:block hidden">
