@@ -102,6 +102,7 @@ export default function PhotoGallery() {
                   className="object-cover aspect-square w-full h-full rounded-lg shadow-lg cursor-pointer"
                   onClick={() => openModal(index)}
                   loading="lazy"
+                  quality={100}
                 />
               </div>
             ))}

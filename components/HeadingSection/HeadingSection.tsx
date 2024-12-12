@@ -26,12 +26,12 @@ const HeadingSection = ({
         <Image
           src={imageSrc}
           alt={imageAlt ?? ""}
-          width={1920}
-          height={1080}
+          fill
           className={`object-cover w-full h-[40vh] md:h-[66vh] block ${
             videoSrc && "md:hidden"
           }`}
           priority
+          quality={100}
         />
       )}
       {videoSrc && (
