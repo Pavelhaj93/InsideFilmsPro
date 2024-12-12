@@ -4,7 +4,7 @@ export default function Video() {
   return (
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
-        heading="VIDEO"
+        heading=""
         description=""
         imageSrc="/images/background/video.jpg"
         imageAlt="Video production background"

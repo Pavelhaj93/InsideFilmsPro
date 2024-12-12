@@ -24,10 +24,10 @@ const links: CustomLink[] = [
   },
   {
     id: 2,
-    name: "Galerie",
+    name: "Reference",
     href: "#",
     submenu: [
-      { id: 1, name: "Galerie", href: "#" },
+      { id: 1, name: "Reference", href: "#" },
       { id: 2, name: "Video", href: "/video" },
       { id: 3, name: "Foto", href: "/foto" },
       { id: 4, name: "Filmy", href: "/filmy" },

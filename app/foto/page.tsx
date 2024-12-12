@@ -65,7 +65,7 @@ export default function PhotoGallery() {
   return (
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
-        heading="FOTO"
+        heading="FOTO galerie"
         description="Posilte vizuální stránku vaší značky prostřednictvím
                 profesionální fotografie zachycující jedinečné okamžiky. Na
                 každý projekt zajistíme toho nejvhodnějšího fotografa, který

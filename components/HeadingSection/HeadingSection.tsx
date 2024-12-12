@@ -59,7 +59,7 @@ const HeadingSection = ({
             <h1 className="mb-4 text-7xl xl:text-9xl font-extralight text-white lg:text-[180px]">
               {heading}
             </h1>
-            <p className="text-lg hidden lg:block tracking-wide text-gray-200 md:text-xl lg:text-2xl">
+            <p className="text-md hidden xl:block tracking-wide font-sans text-gray-200 md:text-lg lg:text-xl">
               {description}
             </p>
           </div>
