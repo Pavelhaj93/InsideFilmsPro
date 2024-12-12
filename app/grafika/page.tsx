@@ -5,7 +5,9 @@ export default function Grafika() {
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
         heading="GRAFICKÁ IDENTITA"
-        description=""
+        description="Vylepšete vizuální identitu vaší značky pomocí našich
+        profesionálních grafických služeb. Postaráme se o to, aby váš vizuální styl byl
+        konzistentní, moderní a odpovídal vaší značce."
         imageSrc="/images/background/grafika.jpg"
         imageAlt="photographer taking picture in the bathroom with wall full of graffiti"
       />

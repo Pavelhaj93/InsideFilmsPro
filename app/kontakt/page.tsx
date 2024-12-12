@@ -22,7 +22,7 @@ export default function Kontakt() {
       role: "Executive Producer / Director / DOP",
       phone: "+420 731 727 306",
       email: "rajnoha@insidepro.cz",
-      imageSrc: "/images/team/jan.jpg",
+      imageSrc: "/images/team/jan.png",
     },
     {
       id: 2,
@@ -45,9 +45,11 @@ export default function Kontakt() {
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
         heading="KONTAKT"
+        description="Jsme tu pro vás, abychom společně vytvořili
+vizuální prezentaci, která bude odpovídat
+vašim hodnotám a brand image"
         imageSrc="/images/background/kontakt.jpg"
         imageAlt="Guy riding a motorbike on rear wheel"
-        description=""
       />
       <section className="bg-black text-white pt-16 pb-8 md:pb-16 px-4 flex items-center justify-center">
         <div className="max-w-6xl mx-auto">

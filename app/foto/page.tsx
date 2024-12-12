@@ -12,7 +12,7 @@ type CustomImage = {
   height: number;
 };
 
-const imageData: CustomImage[] = Array.from({ length: 60 }, (_, index) => ({
+const imageData: CustomImage[] = Array.from({ length: 58 }, (_, index) => ({
   id: index + 1,
   src: `/foto/${index + 1}.jpg`,
   alt: `Photo ${index + 1}`,
@@ -65,13 +65,11 @@ export default function PhotoGallery() {
   return (
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
-        heading="FOTO galerie"
+        heading="FOTOGALERIE"
         description="Posilte vizuální stránku vaší značky prostřednictvím
-                profesionální fotografie zachycující jedinečné okamžiky. Na
-                každý projekt zajistíme toho nejvhodnějšího fotografa, který
-                dokonale vystihne váš styl. Pomůžeme vám sjednotit vizuální
-                identitu vašich videí a fotografií tak, aby dokonale odrážela
-                charakter vaší značky."
+profesionální fotografie zachycující jedinečné okamžiky.
+Pomůžeme vám sjednotit vizuální identitu vašich videí a fotografií tak,
+aby dokonale odrážela charakter vaší značky."
         imageSrc="/images/background/foto.jpg"
         imageAlt="Foto production background"
       />
@@ -137,9 +135,11 @@ export default function PhotoGallery() {
               alt={imageData[selectedImageIndex].alt}
               width={1920}
               height={1080}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain max-w-[90vw] max-h-[90vh]"
+              sizes="(max-width: 768px) 100vw"
+              className="object-cover max-w-[90vw] max-h-[90vh]"
               quality={100}
+              placeholder="blur"
+              blurDataURL="/data/blurData.png"
             />
 
             {/* Right Arrow Button */}

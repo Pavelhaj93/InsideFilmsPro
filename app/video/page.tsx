@@ -4,8 +4,10 @@ export default function Video() {
   return (
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
-        heading=""
-        description=""
+        heading="VIDEO REFERENCE"
+        description="Specializujeme se na tvorbu reklam, propagačních
+videí a online spotů. Zajistíme vše od tvorby námětů, scénáře, produkce a postprodukce.
+"
         imageSrc="/images/background/video.jpg"
         imageAlt="Video production background"
         videoSrc="https://www.youtube.com/embed/zJv4mfBXT0U"

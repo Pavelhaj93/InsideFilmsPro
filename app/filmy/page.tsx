@@ -11,10 +11,12 @@ export default function Films() {
   return (
     <div className="min-h-[calc(100vh-64px)]">
       <HeadingSection
-        heading="Naše filmová a autorská tvorba"
-        description="Vytváříme kvalitní audiovizuální produkce pro všechny platformy. Od
-        krátkých reklamních spotů až po celovečerní filmy a dokumenty. Naše produkce
-        vzniká s láskou k detailu a s důrazem na kvalitu."
+        heading="Naše filmová tvorba"
+        description="Vyprávíme příběhy, které má smysl vyprávět
+proto točíme filmy.
+Specializujeme se na komplexní produkci celovečerních
+dokumentárních filmů, televizních seriálů a krátkometrážních projektů, určených
+do mezinárodní TV, kino a VOD distribuce. "
         imageSrc="/images/background/filmy.jpg"
         imageAlt="Filmy production background"
       />
