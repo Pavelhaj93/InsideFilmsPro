@@ -2,17 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import MobileCarousel from "./new/MobileCarousel";
 
-//
-// naši partneři, sony, fomei, analog vision, dron pro, sigma
+export type Company = {
+  name: string;
+  logo: string;
+  height?: string;
+  width?: string;
+};
 
 export default function ReferencesSection() {
-  type Company = {
-    name: string;
-    logo: string;
-    height?: string;
-  };
-  // Array of company logos
   const companies: Company[] = [
     // { name: "A S A", logo: "/images/companies/A S A_logo_FINAL_white.svg" },
     {
@@ -48,7 +47,7 @@ export default function ReferencesSection() {
       logo: "/images/companies/fit_pro.svg",
     },
     { name: "Fitmin", logo: "/images/companies/fitmin.svg", height: "h-7" },
-    // { name: "Fource B", logo: "/images/companies/Fource-B.webp" }, TODO: convert
+    // { name: "Fource B", logo: "/images/companies/Fource-B.webp" }, TODO: nemam logo
     {
       name: "Generali",
       logo: "/images/companies/generali.svg",
@@ -73,9 +72,9 @@ export default function ReferencesSection() {
     },
     { name: "JIP", logo: "/images/companies/JIP_logo_CMYK.svg", height: "h-6" },
     { name: "Kaufland", logo: "/images/companies/kaufland.svg", height: "h-9" },
-    // { name: "Kik Logo", logo: "/images/companies/kik.svg" }, // TODO: Fix logo
+    { name: "Kik Logo", logo: "/images/companies/kik.svg", width: "w-12" },
     { name: "Konopí", logo: "/images/companies/konopi.svg", height: "h-9" },
-    // { name: "Koupelny Syrový", logo: "/images/companies/koupelny_syrovy.webp" }, //TODO: convert logo
+    // { name: "Koupelny Syrový", logo: "/images/companies/koupelny_syrovy.webp" }, //TODO: rajnoha nechtel
     {
       name: "Matěj Boxing",
       logo: "/images/companies/matej_boxing.svg",
@@ -98,17 +97,18 @@ export default function ReferencesSection() {
     },
     // {
     //   name: "Moidaimo",
-    //   logo: "/images/companies/moidaimo.svg", //TODO: Fix logo
+    //   logo: "/images/companies/moidaimo.svg", //TODO: nemuzu sehnat logo
     // },
     {
       name: "Mystic Sk8",
       logo: "/images/companies/mystic_sk8.svg",
       height: "max-h-14",
     },
-    // {
-    //   name: "Nudz",
-    //   logo: "/images/companies/nudz_col_nazev_zona.svg",
-    // }, // TODO: Fix logo
+    {
+      name: "Nudz",
+      logo: "/images/companies/nudz.svg",
+      width: "w-56",
+    },
     {
       name: "Obecný zájem",
       logo: "/images/companies/obecny_zajem.svg",
@@ -131,21 +131,25 @@ export default function ReferencesSection() {
       name: "Round XII",
       logo: "/images/companies/round_xii_bily.svg",
       height: "h-6",
-    }, // hodit do flatu
-    // {g
-    //   name: "Samsung",
-    //   logo: "/images/companies/samsung.png",
-    // }, //TODO: nejde convertnout
-    // { name: "Studanka", logo: "/images/companies/STUDANKA.svg" }, // TODO: Fix logo
+    },
+    {
+      name: "Samsung",
+      logo: "/images/companies/Samsung.svg",
+    },
+    // { name: "Studanka", logo: "/images/companies/STUDANKA.svg" }, // TODO: nemaj poradny logo na stazeni
     {
       name: "Tipsport",
       logo: "/images/companies/tipsport.svg",
       height: "h-10",
     },
     { name: "UCBANK", logo: "/images/companies/UCBANK.svg", height: "h-9" },
-    // { name: "Vidia", logo: "/images/companies/vidia_white.svg" }, TODO: Fix logo
+    { name: "Vidia", logo: "/images/companies/vidia-logo.svg", width: "w-20" },
     { name: "Vodafone", logo: "/images/companies/vodafone.svg" },
-    // { name: "Wayusa", logo: "/images/companies/wayusa_logo_final.svg" }, // TODO: Fix logo
+    // {
+    //   name: "Wayusa",
+    //   logo: "/images/companies/wayusa_logo.webp",
+    //   height: "h-12",
+    // }, // TODO: nemaj poradny logo na stazeni
     { name: "Your Body", logo: "/images/companies/your_body.svg" },
     {
       name: "Život Postaru",
@@ -205,7 +209,7 @@ export default function ReferencesSection() {
         >
           Naše reference
         </motion.h2>
-        <div className="flex flex-wrap gap-10 justify-center">
+        <div className="lg:flex flex-wrap gap-10 justify-center hidden">
           {companies.map((company, index) => {
             return (
               <div key={index} className="flex items-center justify-center">
@@ -214,12 +218,13 @@ export default function ReferencesSection() {
                   alt={`${company.name} logo`}
                   width={100}
                   height={100}
-                  className={`w-auto max-h-12 object-cover ${company.height} filter grayscale hover:grayscale-0 [transition: filter] duration-300 ease-in-out`}
+                  className={`w-auto ${company.width} max-h-12 object-cover ${company.height} filter grayscale hover:grayscale-0 [transition: filter] duration-300 ease-in-out`}
                 />
               </div>
             );
           })}
         </div>
+        <MobileCarousel companies={companies} />
       </div>
       <div className="container mx-auto max-w-7xl px-4 relative z-10">
         <motion.h2
@@ -235,7 +240,7 @@ export default function ReferencesSection() {
         >
           Naši partneři
         </motion.h2>
-        <div className="flex flex-wrap gap-10 justify-center">
+        <div className="lg:flex flex-wrap gap-10 justify-center hidden">
           {partners.map((partner, index) => {
             return (
               <div key={index} className="flex items-center justify-center">
@@ -250,6 +255,7 @@ export default function ReferencesSection() {
             );
           })}
         </div>
+        <MobileCarousel companies={partners} />
       </div>
     </section>
   );
