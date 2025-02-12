@@ -3,6 +3,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import HeadingSection from "@/components/HeadingSection/HeadingSection";
+import { Dialog, DialogContent } from "@/components/Dialog";
+
+import { DialogTrigger } from "@radix-ui/react-dialog";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 type CustomImage = {
   id: number;
@@ -25,27 +29,6 @@ export default function PhotoGallery() {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null
   );
-
-  useEffect(() => {
-    addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeModal();
-      }
-    });
-    return () => {
-      removeEventListener("keydown", () => {});
-    };
-  }, []);
-
-  const openModal = (index: number) => {
-    setSelectedImageIndex(index);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedImageIndex(null);
-  };
 
   const nextImage = () => {
     if (selectedImageIndex !== null) {
@@ -92,67 +75,57 @@ aby dokonale odrážela charakter vaší značky."
                     : "lg:col-span-1 lg:row-span-1"
                 }`}
               >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={image.width}
-                  height={image.height}
-                  className="object-cover aspect-square w-full h-full rounded-lg shadow-lg cursor-pointer"
-                  onClick={() => openModal(index)}
-                  loading="lazy"
-                  quality={100}
-                />
+                <Dialog>
+                  <DialogTrigger>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={image.width}
+                      height={image.height}
+                      className="object-cover aspect-square w-full h-full rounded-lg shadow-lg cursor-pointer"
+                      onClick={() => setSelectedImageIndex(index)}
+                      loading="lazy"
+                      quality={100}
+                    />
+                  </DialogTrigger>
+                  <DialogContent className="flex items-center h-[90vh] md:w-[90vw] bg-black/80">
+                    {selectedImageIndex !== null && (
+                      <>
+                        <Image
+                          src={imageData[selectedImageIndex].src}
+                          alt={imageData[selectedImageIndex].alt}
+                          width={imageData[selectedImageIndex].width}
+                          height={imageData[selectedImageIndex].height}
+                          quality={100}
+                          className="h-full object-contain max-h-full w-full"
+                        />
+
+                        <button
+                          type="button"
+                          onClick={prevImage}
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 hover:bg-gray-200 focus:outline-none"
+                          aria-label="Previous Image"
+                        >
+                          <ArrowLeft />
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={nextImage}
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 hover:bg-gray-200 focus:outline-none"
+                          aria-label="Next Image"
+                        >
+                          <ArrowRight />
+                        </button>
+                      </>
+                    )}
+                  </DialogContent>
+                </Dialog>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Modal */}
-      {isModalOpen && selectedImageIndex !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative">
-            <button
-              type="button"
-              onClick={closeModal}
-              className="absolute top-0 right-0 p-4 text-white text-5xl hover:text-gray-500 transition-colors"
-            >
-              &times; {/* Close button */}
-            </button>
-
-            {/* Left Arrow Button */}
-            <button
-              type="button"
-              onClick={prevImage}
-              className="absolute top-1/2 left-0 p-4 text-white text-4xl hover:text-gray-500 transition-colors"
-            >
-              &#8592;
-            </button>
-
-            {/* Image Display */}
-            <Image
-              src={imageData[selectedImageIndex].src}
-              alt={imageData[selectedImageIndex].alt}
-              width={1920}
-              height={1080}
-              sizes="(max-width: 768px) 100vw"
-              className="object-cover max-w-[90vw] max-h-[90vh]"
-              quality={100}
-              placeholder="blur"
-              blurDataURL="/data/blurData.png"
-            />
-
-            {/* Right Arrow Button */}
-            <button
-              type="button"
-              onClick={nextImage}
-              className="absolute right-0 top-1/2 p-4 text-white text-4xl hover:text-gray-500 transition-colors"
-            >
-              &#8594;
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
