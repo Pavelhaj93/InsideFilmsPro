@@ -12,7 +12,7 @@ type CustomImage = {
   id: number;
   src: string;
   alt: string;
-  width: number;
+  width: number | string;
   height: number;
   modalWidth: number;
   modalHeight: number;
