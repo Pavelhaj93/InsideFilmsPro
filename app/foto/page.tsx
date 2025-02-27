@@ -14,14 +14,21 @@ type CustomImage = {
   alt: string;
   width: number;
   height: number;
+  modalWidth: number;
+  modalHeight: number;
 };
 
 const imageData: CustomImage[] = Array.from({ length: 58 }, (_, index) => ({
   id: index + 1,
   src: `/foto/${index + 1}.jpg`,
   alt: `Photo ${index + 1}`,
-  width: (index + 1) % 7 === 0 || index === 0 ? 900 : 400,
+  width:
+    (index + 1) % 7 === 0 || index === 0
+      ? "(max-width: 640px) calc(100vw - 16px), (max-width: 768px) 288px,  "
+      : 400,
   height: (index + 1) % 7 === 0 || index === 0 ? 900 : 400,
+  modalWidth: 1920,
+  modalHeight: 1080,
 }));
 
 export default function PhotoGallery() {
@@ -44,6 +51,15 @@ export default function PhotoGallery() {
       setSelectedImageIndex(prevIndex);
     }
   };
+
+  // 4xl: 2560
+  // 3xl: 1920
+  // 2xl: 1536
+  // xl: 1280
+  // lg: 1024
+  // md: 768
+  // sm: 640
+  // xs: 375
 
   return (
     <div className="min-h-[calc(100vh-64px)]">
@@ -80,8 +96,10 @@ aby dokonale odrážela charakter vaší značky."
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={image.width}
-                      height={image.height}
+                      // width={image.width}
+                      // height={image.height}
+                      width={400}
+                      height={400}
                       className="object-cover aspect-square w-full h-full rounded-lg shadow-lg cursor-pointer"
                       onClick={() => setSelectedImageIndex(index)}
                       loading="lazy"
@@ -94,8 +112,12 @@ aby dokonale odrážela charakter vaší značky."
                         <Image
                           src={imageData[selectedImageIndex].src}
                           alt={imageData[selectedImageIndex].alt}
-                          width={imageData[selectedImageIndex].width}
-                          height={imageData[selectedImageIndex].height}
+                          // width={imageData[selectedImageIndex].width}
+                          // height={imageData[selectedImageIndex].height}
+                          // width={imageData[selectedImageIndex].modalWidth}
+                          // height={imageData[selectedImageIndex].modalHeight}
+                          sizes="100vw"
+                          fill
                           quality={100}
                           className="h-full object-contain max-h-full w-full"
                         />

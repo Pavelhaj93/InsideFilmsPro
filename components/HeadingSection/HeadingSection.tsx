@@ -31,7 +31,10 @@ const HeadingSection = ({
           <Image
             src={imageSrc}
             alt={imageAlt ?? ""}
+            // width={1920}
+            // height={1080}
             fill
+            sizes="100vw"
             className="object-cover"
             priority
             quality={100}

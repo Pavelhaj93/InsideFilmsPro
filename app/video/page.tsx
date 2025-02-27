@@ -8,7 +8,7 @@ export default function Video() {
         description="Specializujeme se na tvorbu reklam, propagačních
 videí a online spotů. Zajistíme vše od tvorby námětů, scénáře, produkce a postprodukce.
 "
-        imageSrc="/images/background/video.jpg"
+        imageSrc="/images/background/filmy.jpg"
         imageAlt="Video production background"
         videoSrc="https://www.youtube.com/embed/zJv4mfBXT0U"
       />
