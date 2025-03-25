@@ -61,10 +61,10 @@ export default function ReferencesSection() {
       name: "Heliczech",
       logo: "/images/companies/heliczech_logo.svg",
     },
-    {
-      name: "Hospoda U Baby",
-      logo: "/images/companies/hospoda_u_baby.svg",
-    },
+    // {
+    //   name: "Hospoda U Baby",
+    //   logo: "/images/companies/hospoda_u_baby.svg",
+    // },
     {
       name: "ISCARE",
       logo: "/images/companies/iscare_flat.svg",
@@ -73,7 +73,7 @@ export default function ReferencesSection() {
     { name: "JIP", logo: "/images/companies/JIP_logo_CMYK.svg", height: "h-6" },
     { name: "Kaufland", logo: "/images/companies/kaufland.svg", height: "h-9" },
     { name: "Kik Logo", logo: "/images/companies/kik.svg", width: "w-12" },
-    { name: "Konopí", logo: "/images/companies/konopi.svg", height: "h-9" },
+    // { name: "Konopí", logo: "/images/companies/konopi.svg", height: "h-9" },
     // { name: "Koupelny Syrový", logo: "/images/companies/koupelny_syrovy.webp" }, //TODO: rajnoha nechtel
     {
       name: "Matěj Boxing",
@@ -90,20 +90,25 @@ export default function ReferencesSection() {
       logo: "/images/companies/mbc_international.svg",
       height: "max-h-14",
     },
-    {
-      name: "ML Základní",
-      logo: "/images/companies/ML_zakladni.svg",
-      height: "max-h-14",
-    },
+    // {
+    //   name: "Pitbull",
+    //   logo: "/images/companies/pitbull.png",
+    // },
+    // TODO: sehnat logo, tohle neni videt
+    // {
+    //   name: "ML Základní",
+    //   logo: "/images/companies/ML_zakladni.svg",
+    //   height: "max-h-14",
+    // },
     // {
     //   name: "Moidaimo",
     //   logo: "/images/companies/moidaimo.svg", //TODO: nemuzu sehnat logo
     // },
-    {
-      name: "Mystic Sk8",
-      logo: "/images/companies/mystic_sk8.svg",
-      height: "max-h-14",
-    },
+    // {
+    //   name: "Mystic Sk8",
+    //   logo: "/images/companies/mystic_sk8.svg",
+    //   height: "max-h-14",
+    // },
     {
       name: "Nudz",
       logo: "/images/companies/nudz.svg",
@@ -127,11 +132,11 @@ export default function ReferencesSection() {
       logo: "/images/companies/redbull.svg",
       height: "h-11",
     },
-    {
-      name: "Round XII",
-      logo: "/images/companies/round_xii_bily.svg",
-      height: "h-6",
-    },
+    // {
+    //   name: "Round XII",
+    //   logo: "/images/companies/round_xii_bily.svg",
+    //   height: "h-6",
+    // },g
     {
       name: "Samsung",
       logo: "/images/companies/Samsung.svg",
@@ -150,7 +155,7 @@ export default function ReferencesSection() {
     //   logo: "/images/companies/wayusa_logo.webp",
     //   height: "h-12",
     // }, // TODO: nemaj poradny logo na stazeni
-    { name: "Your Body", logo: "/images/companies/your_body.svg" },
+    // { name: "Your Body", logo: "/images/companies/your_body.svg" },
     {
       name: "Život Postaru",
       logo: "/images/companies/zivot_postaru.svg",

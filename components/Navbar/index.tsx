@@ -43,7 +43,7 @@ const links: CustomLink[] = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<CustomLink[] | null>(null);
 
   function toggleNavigation() {
@@ -96,7 +96,7 @@ const Navbar = () => {
                 )}
               </li>
             ))}
-            {/* <li>
+            <li>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
@@ -104,7 +104,7 @@ const Navbar = () => {
               >
                 Showreel
               </button>
-            </li> */}
+            </li>
           </ul>
         </nav>
         <div className="md:hidden flex items-center">
@@ -169,7 +169,7 @@ const Navbar = () => {
                 </li>
               );
             })}
-            {/* <li>
+            <li>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
@@ -177,7 +177,7 @@ const Navbar = () => {
               >
                 Showreel
               </button>
-            </li> */}
+            </li>
             <li className="my-2">
               <DownloadPDFLink size="md" />
             </li>
@@ -187,8 +187,7 @@ const Navbar = () => {
           </ul>
         </motion.nav>
       )}
-      {/* Video Modal */}
-      {/* <VideoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
+      <VideoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 };

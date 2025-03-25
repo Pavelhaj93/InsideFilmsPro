@@ -1,5 +1,7 @@
 "use client";
 
+import { MobileVideoImage } from "./MobileVideoImage";
+
 const VideoSection = () => {
   return (
     <section
@@ -11,24 +13,16 @@ const VideoSection = () => {
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/5aYRpVmCLZU?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&mute=1&playlist=5aYRpVmCLZU&vq=hd1080"
-          title="Inside Films Showreel"
+          src="https://www.youtube.com/embed/lf4-ew5PI9w?si=VWfmamzt23S5_17A?autoplay=1&loop=1"
+          title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          className="absolute inset-0 w-full h-full md:pointer-events-none"
+          className="absolute inset-0 w-full h-full"
         />
       </div>
 
       {/* Mobile Video */}
       <div className="block md:hidden relative w-full h-full">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/k-8D9aECRiA?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&mute=1&playlist=k-8D9aECRiA"
-          title="INSIDEFILMS SHWRL25 HD IG"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <MobileVideoImage />
       </div>
     </section>
   );

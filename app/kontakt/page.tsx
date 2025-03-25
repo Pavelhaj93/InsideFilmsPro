@@ -36,8 +36,25 @@ export default function Kontakt() {
       id: 3,
       name: "Ing. Sandra Bartelová",
       role: "Marketing Specialist / Production",
+      phone: "+420 736 659 723",
       email: "produkce@insidepro.cz",
       imageSrc: "/images/team/sandra.jpg",
+    },
+    {
+      id: 4,
+      name: "Ondřej Marek",
+      role: "Graphic Designer / Brand Strategist",
+      phone: "+420 736 534 697",
+      email: "marek@insidepro.cz",
+      imageSrc: "/images/team/ondra.jpg",
+    },
+    {
+      id: 5,
+      name: "Pavel Hajduch",
+      role: "Web Developer / SEO Specialist",
+      phone: "+420 720 989 429",
+      email: "hajduch@insidepro.cz",
+      imageSrc: "/images/team/pavel.jpeg",
     },
   ];
 
@@ -85,10 +102,13 @@ vašim hodnotám a brand image"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
+                  className={`${
+                    index > 2 ? "relative md:left-[calc(50%+40px)]" : ""
+                  }  `}
                 >
                   <div className="group h-full border-gray-800 overflow-hidden transform transition-all duration-300 hover:scale-[101%] hover:shadow-xl rounded-xl">
                     <div className="p-0">
-                      <div className="relative h-64 mb-4">
+                      <div className="relative h-[400px] mb-4">
                         <Image
                           src={member.imageSrc}
                           alt={member.name}

@@ -10,7 +10,7 @@ videí a online spotů. Zajistíme vše od tvorby námětů, scénáře, produkc
 "
         imageSrc="/images/background/filmy.jpg"
         imageAlt="Video production background"
-        videoSrc="https://www.youtube.com/embed/zJv4mfBXT0U"
+        videoSrc="https://www.youtube.com/embed/EfyCZVGW6IE?si=iAULKOnZQbrHGRuE"
       />
       {/* New YouTube Video Section */}
       <section className="py-16 bg-black">
@@ -23,7 +23,7 @@ videí a online spotů. Zajistíme vše od tvorby námětů, scénáře, produkc
           </h3>
 
           {/* YouTube Video Embeds */}
-          <div className="space-y-8 h-[500px]"></div>
+          <div className="space-y-8 h-[500px]" />
         </div>
       </section>
     </div>
