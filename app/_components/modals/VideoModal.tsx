@@ -23,7 +23,7 @@ const VideoModal: FC<VideoModalProps> = ({ isOpen, onClose }) => {
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/lf4-ew5PI9w?si=d-OPzItObj1nxI7x"
+          src="https://www.youtube.com/embed/lf4-ew5PI9w?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&playlist=lf4-ew5PI9w"
           title="Inside Films Showreel"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           className="absolute inset-0 w-full h-full"

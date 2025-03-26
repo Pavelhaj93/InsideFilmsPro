@@ -10,7 +10,7 @@ videí a online spotů. Zajistíme vše od tvorby námětů, scénáře, produkc
 "
         imageSrc="/images/background/filmy.jpg"
         imageAlt="Video production background"
-        videoSrc="https://www.youtube.com/embed/EfyCZVGW6IE?si=iAULKOnZQbrHGRuE"
+        videoSrc="https://www.youtube.com/embed/EfyCZVGW6IE"
       />
       {/* New YouTube Video Section */}
       <section className="py-16 bg-black">

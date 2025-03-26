@@ -92,7 +92,7 @@ aby dokonale odrážela charakter vaší značky."
                 }`}
               >
                 <Dialog>
-                  <DialogTrigger>
+                  <DialogTrigger className="w-full">
                     <Image
                       src={image.src}
                       alt={image.alt}
