@@ -1,5 +1,10 @@
 import HeadingSection from "@/components/HeadingSection/HeadingSection";
 
+const metadata = {
+  title: "Naše video reference | R&T Production s.r.o. | INSIDEPRO",
+  description: "Naše video reference | R&T Production s.r.o. | INSIDEPRO",
+};
+
 export default function Video() {
   return (
     <div className="min-h-[calc(100vh-64px)]">

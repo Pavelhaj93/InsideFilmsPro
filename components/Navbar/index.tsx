@@ -96,7 +96,7 @@ const Navbar = () => {
                 )}
               </li>
             ))}
-            <li>
+            {/* <li>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
@@ -104,7 +104,7 @@ const Navbar = () => {
               >
                 Showreel
               </button>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <div className="md:hidden flex items-center">
@@ -169,7 +169,7 @@ const Navbar = () => {
                 </li>
               );
             })}
-            <li>
+            {/* <li>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
@@ -177,7 +177,7 @@ const Navbar = () => {
               >
                 Showreel
               </button>
-            </li>
+            </li> */}
             <li className="my-2">
               <DownloadPDFLink size="md" />
             </li>

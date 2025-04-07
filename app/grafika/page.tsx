@@ -1,5 +1,11 @@
 import HeadingSection from "@/components/HeadingSection/HeadingSection";
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Grafická identita | R&T Production s.r.o. | INSIDEPRO",
+  description: "Grafická identita | R&T Production s.r.o. | INSIDEPRO",
+};
 
 const images = Array.from({ length: 13 }, (_, index) => ({
   id: index + 1,

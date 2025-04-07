@@ -9,9 +9,13 @@ interface VideoModalProps {
 const VideoModal: FC<VideoModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  console.log(
+    `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto:video,q_auto/eu8vo1at2ksf46nszokq`
+  );
+
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-      <div className="relative w-full max-w-7xl h-[calc(100vh-10%)]">
+    <div className="fixed inset-0 flex items-center justify-center">
+      <div className="relative w-full max-w-7xl h-[calc(100vh-10%)] bg-black bg-opacity-80">
         {/* <iframe
           width="100%"
           height="100%"
@@ -20,14 +24,22 @@ const VideoModal: FC<VideoModalProps> = ({ isOpen, onClose }) => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           className="absolute inset-0 w-full h-full"
         /> */}
-        <iframe
+        {/* <iframe
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/lf4-ew5PI9w?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=0&loop=1&playlist=lf4-ew5PI9w"
           title="Inside Films Showreel"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           className="absolute inset-0 w-full h-full"
-        />
+        /> */}
+        {/* <video
+          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto:video,q_auto/eu8vo1at2ksf46nszokq`}
+          className="z-50 w-full h-full max-h-screen pointer-events-none bg-black"
+          autoPlay
+          loop
+          muted
+          playsInline
+        /> */}
         <button
           onClick={onClose}
           type="button"

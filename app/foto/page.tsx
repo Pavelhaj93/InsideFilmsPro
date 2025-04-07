@@ -1,14 +1,13 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Image from "next/image";
 import HeadingSection from "@/components/HeadingSection/HeadingSection";
-import { Dialog, DialogContent } from "@/components/Dialog";
+import type { Metadata } from "next";
+import PhotoGalleryDialog from "../_components/FotoPage/PhotoGalleryDialog";
 
-import { DialogTrigger } from "@radix-ui/react-dialog";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+export const metadata: Metadata = {
+  title: "Naše foto reference | R&T Production s.r.o. | INSIDEPRO",
+  description: "Naše foto reference | R&T Production s.r.o. | INSIDEPRO",
+};
 
-type CustomImage = {
+export type CustomImage = {
   id: number;
   src: string;
   alt: string;
@@ -32,26 +31,6 @@ const imageData: CustomImage[] = Array.from({ length: 58 }, (_, index) => ({
 }));
 
 export default function PhotoGallery() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
-    null
-  );
-
-  const nextImage = () => {
-    if (selectedImageIndex !== null) {
-      const nextIndex = (selectedImageIndex + 1) % imageData.length;
-      setSelectedImageIndex(nextIndex);
-    }
-  };
-
-  const prevImage = () => {
-    if (selectedImageIndex !== null) {
-      const prevIndex =
-        (selectedImageIndex - 1 + imageData.length) % imageData.length;
-      setSelectedImageIndex(prevIndex);
-    }
-  };
-
   // 4xl: 2560
   // 3xl: 1920
   // 2xl: 1536
@@ -91,58 +70,11 @@ aby dokonale odrážela charakter vaší značky."
                     : "lg:col-span-1 lg:row-span-1"
                 }`}
               >
-                <Dialog>
-                  <DialogTrigger className="w-full">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      // width={image.width}
-                      // height={image.height}
-                      width={400}
-                      height={400}
-                      className="object-cover aspect-square w-full h-full rounded-lg shadow-lg cursor-pointer"
-                      onClick={() => setSelectedImageIndex(index)}
-                      loading="lazy"
-                      quality={100}
-                    />
-                  </DialogTrigger>
-                  <DialogContent className="flex items-center h-[90vh] md:w-[90vw] bg-black/80">
-                    {selectedImageIndex !== null && (
-                      <>
-                        <Image
-                          src={imageData[selectedImageIndex].src}
-                          alt={imageData[selectedImageIndex].alt}
-                          // width={imageData[selectedImageIndex].width}
-                          // height={imageData[selectedImageIndex].height}
-                          // width={imageData[selectedImageIndex].modalWidth}
-                          // height={imageData[selectedImageIndex].modalHeight}
-                          sizes="100vw"
-                          fill
-                          quality={100}
-                          className="h-full object-contain max-h-full w-full"
-                        />
-
-                        <button
-                          type="button"
-                          onClick={prevImage}
-                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 hover:bg-gray-200 focus:outline-none"
-                          aria-label="Previous Image"
-                        >
-                          <ArrowLeft />
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={nextImage}
-                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 hover:bg-gray-200 focus:outline-none"
-                          aria-label="Next Image"
-                        >
-                          <ArrowRight />
-                        </button>
-                      </>
-                    )}
-                  </DialogContent>
-                </Dialog>
+                <PhotoGalleryDialog
+                  image={image}
+                  imageData={imageData}
+                  index={index}
+                />
               </div>
             ))}
           </div>
