@@ -16,13 +16,14 @@ const VideoSection = () => {
       }
     );
 
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      observer.observe(videoElement);
     }
 
     return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
+      if (videoElement) {
+        observer.unobserve(videoElement);
       }
     };
   }, []);
