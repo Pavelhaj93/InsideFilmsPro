@@ -43,7 +43,7 @@ const VideoSection = () => {
       className="relative w-full overflow-hidden md:h-auto"
     >
       {/* Desktop Video */}
-      <div className="block w-full h-full">
+      <div className="hidden md:block w-full h-full">
         <video
           ref={videoRef}
           src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto:video,q_auto/eu8vo1at2ksf46nszokq`}
@@ -58,9 +58,19 @@ const VideoSection = () => {
 
       {/* TODO: add trigger to open modal with video on vimeo */}
       {/* Mobile Video */}
-      {/* <div className="block md:hidden relative w-full h-full">
-        <MobileVideoImage />
-      </div> */}
+      {/* <MobileVideoImage /> */}
+      <div className="block md:hidden relative w-full h-full">
+        <video
+          ref={videoRef}
+          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto:video,q_auto/rukll0mxoskxhl3dgxlz`}
+          className="w-full h-full max-h-screen pointer-events-none bg-black"
+          autoPlay
+          loop
+          playsInline
+          muted
+          controls={false}
+        />
+      </div>
     </section>
   );
 };
