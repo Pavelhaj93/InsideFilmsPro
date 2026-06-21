@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Button from "../Button";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "../SocialMediaIcons";
 import DownloadPDFLink from "../DownloadPDFLink";
@@ -24,6 +24,11 @@ const links: CustomLink[] = [
   },
   {
     id: 2,
+    name: "Služby",
+    href: "/sluzby",
+  },
+  {
+    id: 3,
     name: "Reference",
     href: "#",
     submenu: [
@@ -35,7 +40,12 @@ const links: CustomLink[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
+    name: "Kariéra",
+    href: "/kariera",
+  },
+  {
+    id: 5,
     name: "Kontakt",
     href: "/kontakt",
   },
@@ -65,6 +75,7 @@ const Navbar = () => {
           </div>
           <span className="sr-only">Inside Films</span>
         </Link>
+
         <nav className="hidden text-sm font-medium md:flex text-white">
           <ul className="flex items-baseline gap-6 relative">
             {links.map((link) => (

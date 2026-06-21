@@ -3,6 +3,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-primary: #034c4c;
+  --color-secondary: #b4e8ed;
+  --color-tertiary: #f09fa6;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: "0";
+    }
+    to {
+      height: var(--radix--accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix--accordion-content-height);
+    }
+    to {
+      height: "0";
+    }
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

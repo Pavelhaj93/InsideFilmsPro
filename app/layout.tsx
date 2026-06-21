@@ -29,14 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bebasNeue.className} ${oswald.variable}`}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <footer className="w-full bg-black text-white py-4 text-center">
+        {/* <footer className="w-full bg-black text-white py-4 text-center">
           <p className="text-lg tracking-wider">
             &copy; {new Date().getFullYear()} R&T Production s.r.o. - All rights
             reserved.
           </p>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );

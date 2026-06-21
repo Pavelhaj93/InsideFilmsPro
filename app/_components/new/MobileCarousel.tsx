@@ -2,7 +2,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/components/Carousel/Carousel";
+} from "@/components/ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
 import Image from "next/image";
 import type { FC } from "react";
